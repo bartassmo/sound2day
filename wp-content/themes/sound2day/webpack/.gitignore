@@ -1,0 +1,6 @@
+.htaccess
+robots.txt
+wp-config.php
+/wp-content/uploads/
+/wp-content/themes/template-name/node_modules
+/wp-content/cache
