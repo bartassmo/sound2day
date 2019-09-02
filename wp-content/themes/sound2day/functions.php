@@ -44,7 +44,7 @@ if ( ! function_exists( 'sound2day_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary', 'sound2day' ),
+			'header-menu' => esc_html__( 'Header', 'sound2day' ),
 		) );
 
 		/*
@@ -120,11 +120,17 @@ add_action( 'widgets_init', 'sound2day_widgets_init' );
  * Enqueue scripts and styles.
  */
 function sound2day_scripts() {
-	wp_enqueue_style( 'sound2day-style', get_stylesheet_uri() );
+    wp_enqueue_style( 'sound2day-style', get_stylesheet_uri() );
+    
+    wp_enqueue_style( 'sound2day-fonts', 'https://fonts.googleapis.com/css?family=Comfortaa:400,700|Playfair+Display:400,700&display=swap&subset=latin-ext' );
+    
+    wp_enqueue_style('main-style', get_template_directory_uri() . '/dist/css/style.css', array(), '20190902', false );
+    
+	wp_enqueue_script( 'sound2day-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20190902', true );
 
-	wp_enqueue_script( 'sound2day-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
-
-	wp_enqueue_script( 'sound2day-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+    wp_enqueue_script( 'sound2day-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20190902', true );
+    
+    wp_enqueue_script( 'main-script', get_template_directory_uri() . '/dist/js/main.js', array(), '20190902', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -159,3 +165,10 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+include locate_template('function-parts/custom-functions.php');
+
+function custom_fields() {
+    include(locate_template('function-parts/home-fields.php'));
+}
+
+add_action('cmb2_init', 'custom_fields');
