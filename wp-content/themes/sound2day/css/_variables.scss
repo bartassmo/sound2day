@@ -1,0 +1,24 @@
+/************************************/
+/*********   VARIABLES   ***********/
+/***********************************/
+
+$desktop: 'only screen and (min-width: 1599px)';
+$sDesktop: 'only screen and (min-width: 1365px)';
+$tablet: 'only screen and (min-width: 1279px)';
+$sTablet: 'only screen and (min-width: 1023px)';
+$mobile: 'only screen and (min-width: 767px)';
+$mMobile: 'only screen and (min-width: 479px)';
+$sMobile: 'only screen and (min-width: 371px)';
+
+$cDark: #141414;
+$cLight: #333232;
+$cWhite: #ffffff;
+$cPrimary: #548d9b;
+$cBackground: #f3f3f3;
+
+$fRaleway: 'Raleway', sans-serif;
+$fComfortaa: 'Comfortaa', cursive;
+
+@mixin animate {
+    transition: all 0.3s ease-in-out;
+}

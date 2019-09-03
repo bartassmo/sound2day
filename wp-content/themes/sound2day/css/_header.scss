@@ -1,0 +1,237 @@
+.header {
+    background-color: $cLight;
+    &__container {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @media #{$mobile} {
+            padding-top: 25px;
+            padding-bottom: 25px;
+        }
+        @media #{$tablet} {
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+        @media #{$desktop} {
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+    }
+    &__logo {
+        width: 137px;
+        height: 35px;
+        display: inline-block;
+        @media #{$mobile} {
+            width: 157px;
+        }
+        @media #{$tablet} {
+            width: 197px;
+            height: 41px;
+        }
+        @media #{$sDesktop} {
+            width: 250px;
+            height: 50px;
+        }
+        @media #{$desktop} {
+            width: 288px;
+            height: 57px;
+            width: 350px;
+            height: 70px;
+        }
+    }
+    &__hamburger {
+        width: 21px;
+        height: 16px;
+        margin-left: 9px;
+        transform: rotate(0deg);
+        transition: 0.2s ease-in-out;
+        cursor: pointer;
+        padding: 0;
+        border: 0;
+        background-color: transparent;
+        outline: none;
+        position: relative;
+        z-index: 101;
+        @media #{$sTablet} {
+            display: none;
+        }
+        span {
+            display: block;
+            position: absolute;
+            height: 2px;
+            background: $cPrimary;
+            width: 100%;
+            opacity: 1;
+            left: 0;
+            transform: rotate(0deg);
+            transition: 0.2s ease-in-out;
+            &:nth-child(1) {
+                top: 0;
+            }
+            &:nth-child(2),
+            &:nth-child(3) {
+                top: 6px;
+            }
+            &:nth-child(4) {
+                top: 12px;
+            }
+        }
+        &.open {
+            span {
+                &:nth-child(1) {
+                    top: 6px;
+                    width: 0%;
+                    left: 50%;
+                }
+                &:nth-child(2) {
+                    transform: rotate(45deg);
+                }
+                &:nth-child(3) {
+                    transform: rotate(-45deg);
+                }
+                &:nth-child(4) {
+                    top: 6px;
+                    width: 0%;
+                    left: 50%;
+                }
+            }
+        }
+    }
+    &__nav {
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        z-index: 100;
+        background-color: $cWhite;
+        bottom: 0;
+        padding: 40px 20px;
+        transform: translate(100%, 0);
+        transition: 0.3s all ease-in-out;
+        opacity: 0;
+        height: 100vh;
+        @media #{$sTablet} {
+            flex-direction: row;
+            padding: 0;
+            height: auto;
+            transform: none;
+            opacity: 1;
+            position: static;
+            background-color: transparent;
+            justify-content: flex-end;
+        }
+        &.opened {
+            opacity: 1;
+            transform: translate(0, 0);
+        }
+    }
+}
+
+.menu {
+    list-style: none;
+    margin: 0;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    @media #{$sTablet} {
+        flex-direction: row;
+    }
+    &.opened {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+    &-item {
+        text-transform: uppercase;
+        font-size: 19px;
+        margin-bottom: 5px;
+        @media #{$mobile} {
+            letter-spacing: 0.4px;
+            margin: 0 10px;
+            font-size: 18px;
+        }
+        @media #{$sTablet} {
+            font-size: 15px;
+            margin: 0 7px;
+        }
+        @media #{$tablet} {
+            letter-spacing: 0.8px;
+            margin: 0 12px;
+            font-size: 16px;
+        }
+        @media #{$desktop} {
+            letter-spacing: 1.4px;
+            margin: 0 20px;
+            font-size: 21px;
+        }
+    }
+    &__link {
+        color: $cLight;
+        position: relative;
+        text-decoration: none;
+        &::after {
+            content: '';
+            display: block;
+            height: 1px;
+            width: 100%;
+            transform: scaleX(0);
+            position: absolute;
+            bottom: 2px;
+            background-color: $cPrimary;
+            transform-origin: top left;
+            left: -2px;
+            transition: transform 0.3s ease;
+        }
+        &:hover {
+            color: inherit;
+            &::after {
+                transform: scaleX(1);
+            }
+        }
+        @media #{$sTablet} {
+            color: $cWhite;
+            font-weight: 400;
+            &:hover {
+                color: $cWhite;
+            }
+        }
+    }
+}
+
+.social {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    @media #{$sTablet} {
+        margin: 0;
+    }
+    &__link {
+        margin: 0 6px;
+        width: 30px;
+        height: 30px;
+        @media #{$sTablet} {
+            width: 25px;
+            height: 25px;
+        }
+        @media #{$sDesktop} {
+            width: 28px;
+            height: 28px;
+        }
+        svg {
+            width: 100%;
+            height: 100%;
+            path {
+                fill: $cPrimary;
+                @media #{$sTablet} {
+                    fill: $cWhite;
+                }
+            }
+        }
+    }
+}

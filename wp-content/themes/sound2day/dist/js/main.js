@@ -10690,23 +10690,13 @@ __webpack_require__(0);
 /* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function($) {$(window).on('load', function() {
-	$('h1').html('dziala jqueryyy');
+/* WEBPACK VAR INJECTION */(function($) {$(document).ready(function() {
+    $('.header__hamburger').click(function() {
+        $(this).toggleClass('open');
+        $('.header__nav').toggleClass('opened');
+    });
+});
 
-	$('.colorbox').colorbox();
-	console.log('color');
-
-
-	$('#topSlider').slick({
-	  dots: true,
-	  infinite: false,
-	  speed: 300,
-	  slidesToShow: 1,
-	  slidesToScroll: 1,  
-	});
-
-	console.log('kopytko');
-})
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ })

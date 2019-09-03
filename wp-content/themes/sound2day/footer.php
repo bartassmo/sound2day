@@ -11,24 +11,11 @@
 
 ?>
 
-	</div><!-- #content -->
-
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'sound2day' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'sound2day' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'sound2day' ), 'sound2day', '<a href="http://underscores.me/">Bartłomiej Smołucha</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
+<footer class="footer">
+    <div class="container">
+        <a href="<?php echo home_url(); ?>" class="footer__title">Sound2day</a>
+    </div>
+</footer>
 
 <?php wp_footer(); ?>
 

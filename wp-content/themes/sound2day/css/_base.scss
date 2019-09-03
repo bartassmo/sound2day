@@ -1,0 +1,65 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 17px;
+    font-size: 62.5%;
+    font-weight: 300;
+}
+
+body {
+    font-family: $fComfortaa;
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 1.6;
+    color: $cLight;
+}
+
+.container {
+    padding: 0 15px;
+    @media #{$mobile} {
+        padding: 0 35px;
+    }
+    @media #{$sTablet} {
+        padding: 0 3%;
+    }
+    @media #{$tablet} {
+        padding: 0 5%;
+    }
+    @media #{$sDesktop} {
+        padding: 0 7%;
+    }
+    @media #{$desktop} {
+        padding: 0 9%;
+    }
+}
+
+.bPadding {
+    padding-top: 35px;
+    padding-bottom: 35px;
+    @media #{$desktop} {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+}
+
+.nPadding {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    @media #{$desktop} {
+        padding-top: 120px;
+        padding-bottom: 60px;
+    }
+}
+
+.sPadding {
+    padding-top: 35px;
+    padding-bottom: 35px;
+    @media #{$desktop} {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+}
