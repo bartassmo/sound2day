@@ -1,0 +1,29 @@
+.hero {
+    background-position: top left;
+    background-repeat: no-repeat;
+    padding-top: 1px;
+    &__text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 110px;
+    }
+    &__title {
+        font-family: $fComfortaa;
+        color: $cWhite;
+        font-size: 75px;
+        font-weight: 500;
+        display: inline-block;
+    }
+}
+
+.info {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: $cWhite;
+    &__block {
+        display: inline-flex;
+        width: 50%;
+    }
+}

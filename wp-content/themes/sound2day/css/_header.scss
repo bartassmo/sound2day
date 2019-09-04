@@ -1,11 +1,36 @@
 .header {
-    background-color: $cLight;
+    background-color: rgba(51, 50, 50, 0);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    @include animate;
+    border-bottom: 1px solid rgba(51, 50, 50, 0.5);
+    &.scrolled {
+        background-color: rgba(51, 50, 50, 1);
+        border-bottom-color: rgba(51, 50, 50, 1);
+        .header {
+            &__container {
+                @media #{$tablet} {
+                    padding-top: 25px;
+                    padding-bottom: 25px;
+                }
+            }
+            &__logo {
+                @media #{$tablet} {
+                    transform: scale(0.95);
+                }
+            }
+        }
+    }
     &__container {
         padding-top: 20px;
         padding-bottom: 20px;
         display: flex;
         align-items: center;
         justify-content: space-between;
+        @include animate;
         @media #{$mobile} {
             padding-top: 25px;
             padding-bottom: 25px;
@@ -14,15 +39,12 @@
             padding-top: 30px;
             padding-bottom: 30px;
         }
-        @media #{$desktop} {
-            padding-top: 40px;
-            padding-bottom: 40px;
-        }
     }
     &__logo {
         width: 137px;
         height: 35px;
         display: inline-block;
+        @include animate;
         @media #{$mobile} {
             width: 157px;
         }
@@ -31,14 +53,8 @@
             height: 41px;
         }
         @media #{$sDesktop} {
-            width: 250px;
-            height: 50px;
-        }
-        @media #{$desktop} {
-            width: 288px;
-            height: 57px;
-            width: 350px;
-            height: 70px;
+            width: 225px;
+            height: 48px;
         }
     }
     &__hamburger {
@@ -158,16 +174,15 @@
         @media #{$sTablet} {
             font-size: 15px;
             margin: 0 7px;
+            letter-spacing: 0.8px;
         }
         @media #{$tablet} {
-            letter-spacing: 0.8px;
-            margin: 0 12px;
+            letter-spacing: 1.2px;
+            margin: 0 10px;
             font-size: 16px;
         }
         @media #{$desktop} {
-            letter-spacing: 1.4px;
-            margin: 0 20px;
-            font-size: 21px;
+            letter-spacing: 1.6px;
         }
     }
     &__link {
@@ -216,12 +231,12 @@
         width: 30px;
         height: 30px;
         @media #{$sTablet} {
-            width: 25px;
-            height: 25px;
+            width: 19px;
+            height: 19px;
         }
         @media #{$sDesktop} {
-            width: 28px;
-            height: 28px;
+            width: 22px;
+            height: 22px;
         }
         svg {
             width: 100%;

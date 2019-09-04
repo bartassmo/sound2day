@@ -122,7 +122,7 @@ add_action( 'widgets_init', 'sound2day_widgets_init' );
 function sound2day_scripts() {
     wp_enqueue_style( 'sound2day-style', get_stylesheet_uri() );
     
-    wp_enqueue_style( 'sound2day-fonts', 'https://fonts.googleapis.com/css?family=Comfortaa:300,700|Raleway:300,400,700&display=swap&subset=latin-ext' );
+    wp_enqueue_style( 'sound2day-fonts', 'https://fonts.googleapis.com/css?family=Comfortaa:300,400,600|Lato:300,400&display=swap&subset=latin-ext' );
     
     wp_enqueue_style('main-style', get_template_directory_uri() . '/dist/css/style.css', array(), '20190902', false );
     
