@@ -50,3 +50,17 @@
         'id'   => 'img',
         'type' => 'file',
     ) );
+
+    $page->add_field( array(
+        'name'       => esc_html__( 'Tytuł sekcji producentów', 'cmb2' ),
+        'id'         => 'producents-title',
+        'type'       => 'text',
+        'sanitization_cb' => false,
+    ));
+
+    $page->add_field( array(
+        'name'       => esc_html__( 'Producenci sprzętu', 'cmb2' ),
+        'id'         => 'producents-slider',
+        'type'       => 'file_list',
+        'sanitization_cb' => false,
+    ));

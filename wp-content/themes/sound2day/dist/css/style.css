@@ -12,7 +12,7 @@ html {
   font-weight: 300; }
 
 body {
-  font-family: "Comfortaa", cursive;
+  font-family: "Lato", sans-serif;
   font-weight: 300;
   font-size: 17px;
   line-height: 1.6;
@@ -39,6 +39,18 @@ body {
 .bPadding {
   padding-top: 35px;
   padding-bottom: 35px; }
+  @media only screen and (min-width: 767px) {
+    .bPadding {
+      padding-top: 50px;
+      padding-bottom: 50px; } }
+  @media only screen and (min-width: 1023px) {
+    .bPadding {
+      padding-top: 75px;
+      padding-bottom: 75px; } }
+  @media only screen and (min-width: 1365px) {
+    .bPadding {
+      padding-top: 100px;
+      padding-bottom: 100px; } }
   @media only screen and (min-width: 1599px) {
     .bPadding {
       padding-top: 120px;
@@ -47,6 +59,18 @@ body {
 .nPadding {
   padding-top: 20px;
   padding-bottom: 20px; }
+  @media only screen and (min-width: 767px) {
+    .nPadding {
+      padding-top: 30px;
+      padding-bottom: 30px; } }
+  @media only screen and (min-width: 1023px) {
+    .nPadding {
+      padding-top: 45px;
+      padding-bottom: 45px; } }
+  @media only screen and (min-width: 1365px) {
+    .nPadding {
+      padding-top: 60px;
+      padding-bottom: 60px; } }
   @media only screen and (min-width: 1599px) {
     .nPadding {
       padding-top: 80px;
@@ -55,10 +79,33 @@ body {
 .sPadding {
   padding-top: 35px;
   padding-bottom: 35px; }
+  @media only screen and (min-width: 767px) {
+    .sPadding {
+      padding-top: 40px;
+      padding-bottom: 40px; } }
+  @media only screen and (min-width: 1023px) {
+    .sPadding {
+      padding-top: 50px;
+      padding-bottom: 50px; } }
+  @media only screen and (min-width: 1365px) {
+    .sPadding {
+      padding-top: 55px;
+      padding-bottom: 55px; } }
   @media only screen and (min-width: 1599px) {
     .sPadding {
       padding-top: 60px;
       padding-bottom: 60px; } }
+
+.title {
+  font-size: 26px;
+  font-family: "Comfortaa", cursive;
+  font-weight: 600;
+  margin: 0;
+  margin-bottom: 35px;
+  text-transform: uppercase;
+  color: #141414; }
+  .title--center {
+    text-align: center; }
 
 .header {
   background-color: rgba(51, 50, 50, 0);
@@ -213,6 +260,7 @@ body {
   .menu-item {
     text-transform: uppercase;
     font-size: 19px;
+    font-family: "Comfortaa", cursive;
     margin-bottom: 5px; }
     @media only screen and (min-width: 767px) {
       .menu-item {
@@ -290,18 +338,20 @@ body {
           .social__link svg path {
             fill: #ffffff; } }
 
+.footer {
+  background-color: #333232; }
+
 .hero {
   background-position: top left;
   background-repeat: no-repeat;
-  padding-top: 1px; }
+  background-color: #f7f7f7; }
   .hero__text {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: center;
         justify-content: center;
     -ms-flex-align: center;
-        align-items: center;
-    margin-top: 110px; }
+        align-items: center; }
   .hero__title {
     font-family: "Comfortaa", cursive;
     color: #ffffff;
@@ -318,8 +368,66 @@ body {
       flex-wrap: wrap;
   background-color: #ffffff; }
   .info__block {
+    width: calc(50% - 20px);
+    margin: 0 10px 40px;
+    border: 1px solid #74a4b4;
+    display: -ms-flexbox;
+    display: flex;
+    min-height: 275px;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-negative: 0;
+        flex-shrink: 0; }
+    .info__block:nth-of-type(even) .info__img {
+      -ms-flex-order: 0;
+          order: 0; }
+    .info__block:nth-child(3), .info__block:nth-child(4) {
+      margin-bottom: 0; }
+    @media only screen and (min-width: 1023px) {
+      .info__block {
+        -ms-flex-direction: row;
+            flex-direction: row; } }
+  .info__img {
     display: -ms-inline-flexbox;
     display: inline-flex;
-    width: 50%; }
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    padding-right: 15px;
+    background-position: center center;
+    background-size: cover;
+    -ms-flex-order: 1;
+        order: 1; }
+  .info__content {
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-align: start;
+        align-items: flex-start;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    padding: 45px 35px 10px; }
+  .info__title {
+    font-family: "Comfortaa", cursive;
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    font-size: 18px;
+    line-height: 1.4; }
+  .info__text {
+    font-family: "Lato", sans-serif;
+    font-size: 16px; }
+
+.producents__wrapper {
+  display: -ms-flexbox;
+  display: flex;
+  padding: 35px 0; }
+
+.producents .slide {
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin: 30px 15px; }
 
 /*# sourceMappingURL=style.css.map*/

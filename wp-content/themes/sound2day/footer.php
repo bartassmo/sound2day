@@ -11,7 +11,7 @@
 
 ?>
 
-<footer class="footer" style="height: 500px;">
+<footer class="footer">
     <div class="container">
         <a href="<?php echo home_url(); ?>" class="footer__title">Sound2day</a>
     </div>

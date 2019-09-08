@@ -1,12 +1,11 @@
 .hero {
     background-position: top left;
     background-repeat: no-repeat;
-    padding-top: 1px;
+    background-color: $cBackground;
     &__text {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-top: 110px;
     }
     &__title {
         font-family: $fComfortaa;
@@ -23,7 +22,63 @@
     flex-wrap: wrap;
     background-color: $cWhite;
     &__block {
+        width: calc(50% - 20px);
+        margin: 0 10px 40px;
+        border: 1px solid $cLPrimary;
+        display: flex;
+        min-height: 275px;
+        flex-direction: column;
+        flex-shrink: 0;
+        &:nth-of-type(even) {
+            .info__img {
+                order: 0;
+            }
+        }
+        &:nth-child(3),
+        &:nth-child(4) {
+            margin-bottom: 0;
+        }
+        @media #{$sTablet} {
+            flex-direction: row;
+        }
+    }
+    &__img {
         display: inline-flex;
-        width: 50%;
+        flex-basis: 50%;
+        padding-right: 15px;
+        background-position: center center;
+        background-size: cover;
+        order: 1;
+    }
+    &__content {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-basis: 50%;
+        padding: 45px 35px 10px;
+    }
+    &__title {
+        font-family: $fComfortaa;
+        letter-spacing: 1px;
+        font-weight: 600;
+        margin-bottom: 15px;
+        font-size: 18px;
+        line-height: 1.4;
+    }
+    &__text {
+        font-family: $fLato;
+        font-size: 16px;
+    }
+}
+
+.producents {
+    &__wrapper {
+        display: flex;
+        padding: 35px 0;
+    }
+    .slide {
+        display: inline-flex;
+        margin: 30px 15px;
     }
 }
