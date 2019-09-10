@@ -19,26 +19,5 @@
             echo '<div class="slide">';
             echo wp_get_attachment_image( $attachment_id, $img_size );
             echo '</div>';
-            echo '<div class="slide">';
-            echo wp_get_attachment_image( $attachment_id, $img_size );
-            echo '</div>';
-            echo '<div class="slide">';
-            echo wp_get_attachment_image( $attachment_id, $img_size );
-            echo '</div>';
-            echo '<div class="slide">';
-            echo wp_get_attachment_image( $attachment_id, $img_size );
-            echo '</div>';
-            echo '<div class="slide">';
-            echo wp_get_attachment_image( $attachment_id, $img_size );
-            echo '</div>';
-            echo '<div class="slide">';
-            echo wp_get_attachment_image( $attachment_id, $img_size );
-            echo '</div>';
-            echo '<div class="slide">';
-            echo wp_get_attachment_image( $attachment_id, $img_size );
-            echo '</div>';
-            echo '<div class="slide">';
-            echo wp_get_attachment_image( $attachment_id, $img_size );
-            echo '</div>';
         }
     }

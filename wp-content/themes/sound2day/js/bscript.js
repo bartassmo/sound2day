@@ -21,4 +21,14 @@ $(document).ready(function() {
         $(this).toggleClass('open');
         $('.header__nav').toggleClass('opened');
     });
+    $('#sliderProd').slick({
+        arrows: false,
+        infinite: true,
+        variableWidth: true,
+        swipeToSlide: true,
+        autoplay: true,
+        autoplaySpeed: 0,
+        speed: 5000,
+        cssEase: 'linear'
+    });
 });
