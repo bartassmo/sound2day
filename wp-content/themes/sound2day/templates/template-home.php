@@ -37,7 +37,9 @@ $producentsTitle = get_post_meta( get_the_id(), 'producents-title', true);
     </div>
 </section>
 <section class="producents sPadding">
-    <h1 class="title title--center"><?php echo $producentsTitle; ?></h1>
+    <div class="title__box">
+        <h1 class="title title--center"><?php echo $producentsTitle; ?></h1>
+    </div>
     <div class="producents__wrapper" id="sliderProd">
         <?php cmb2_output_file_list('producents-slider', ''); ?>
     </div>

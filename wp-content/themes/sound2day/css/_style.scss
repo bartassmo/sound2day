@@ -76,9 +76,14 @@
     &__wrapper {
         display: flex;
         padding: 35px 0;
+        background-color: $cBackground;
     }
     .slide {
         display: inline-flex;
         margin: 30px 15px;
+    }
+    .slick-track {
+        display: flex;
+        align-items: center;
     }
 }

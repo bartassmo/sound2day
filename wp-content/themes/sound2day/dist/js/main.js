@@ -10706,7 +10706,6 @@ __webpack_require__(0);
 
 $(window).on('scroll', function() {
     checkScroll();
-    wWdth = $(window).width();
 });
 
 $(document).ready(function() {
@@ -10718,7 +10717,6 @@ $(document).ready(function() {
         arrows: false,
         infinite: true,
         variableWidth: true,
-        swipeToSlide: true,
         autoplay: true,
         autoplaySpeed: 0,
         speed: 5000,
