@@ -41,7 +41,7 @@ $producentsTitle = get_post_meta( get_the_id(), 'producents-title', true);
         <h1 class="title title--center"><?php echo $producentsTitle; ?></h1>
     </div>
     <div class="producents__wrapper" id="sliderProd">
-        <?php cmb2_output_file_list('producents-slider', ''); ?>
+        <?php cmb2_output_file_list('producents-slider', 'sliderImg'); ?>
     </div>
 </section>
 

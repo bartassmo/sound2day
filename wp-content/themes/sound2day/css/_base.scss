@@ -108,7 +108,7 @@ body {
 }
 
 .title {
-    font-size: 26px;
+    font-size: 18px;
     font-family: $fComfortaa;
     font-weight: 600;
     margin: 0;
@@ -119,12 +119,27 @@ body {
     justify-content: center;
     align-items: center;
     padding-bottom: 5px;
+    @media #{$mobile} {
+        font-size: 20px;
+    }
+    @media #{$sTablet} {
+        font-size: 22px;
+    }
+    @media #{$sDesktop} {
+        font-size: 26px;
+    }
     &__box {
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        margin-bottom: 35px;
+        margin-bottom: 20px;
+        @media #{$sTablet} {
+            margin-bottom: 20px;
+        }
+        @media #{$sDesktop} {
+            margin-bottom: 35px;
+        }
     }
     &::after {
         content: '';

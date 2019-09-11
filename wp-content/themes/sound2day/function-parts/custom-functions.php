@@ -21,3 +21,5 @@
             echo '</div>';
         }
     }
+
+    add_image_size( 'sliderImg', 200, 125 );
