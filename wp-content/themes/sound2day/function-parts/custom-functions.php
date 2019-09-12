@@ -23,3 +23,47 @@
     }
 
     add_image_size( 'sliderImg', 200, 125 );
+
+    /*---------------------------------------------------*/
+/*                    WINES POST TYPE                        */
+/*---------------------------------------------------*/
+
+
+function create_post_types() {
+
+    register_post_type('service', array(
+        'labels' => array(
+            'name' => __('Usługi'),
+            'singular_name' => __('Usługa')
+        ),
+        'public' => true,
+        'rewrite' => array('slug' => 'uslugi'),
+        'supports' => array(
+            'title',
+            'page-attributes',
+            'editor',
+            'thumbnail',
+        ),
+        'hierarchical' => true,
+        'posts_per_archive_page' => 50
+    ));
+
+    register_post_type('rental', array(
+        'labels' => array(
+            'name' => __('Wypożyczalnia'),
+            'singular_name' => __('Wypożyczalnia')
+        ),
+        'public' => true,
+        'rewrite' => array('slug' => 'wypozyczalnia'),
+        'supports' => array(
+            'title',
+            'page-attributes',
+            'editor',
+            'thumbnail',
+        ),
+        'hierarchical' => false,
+        'posts_per_archive_page' => 50
+    ));
+}
+
+add_action('init', 'create_post_types');
