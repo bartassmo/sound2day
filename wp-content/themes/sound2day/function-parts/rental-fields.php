@@ -3,8 +3,7 @@
     $page = new_cmb2_box( array(
         'id'    =>  'rental',
         'title' =>  esc_html__( 'Sprzęt do wypożyczenia', 'cmb2'),
-        'object_types'  => array( 'page' ),
-        'show_on'   => array( 'key' =>  'page-template', 'value'    =>  'templates/template-home.php' ),
+        'object_types'  => array( 'rental' ),
     ));
 
     $blog_group_id = $page->add_field( array(
@@ -27,9 +26,8 @@
     ) );
     $page->add_group_field( $blog_group_id, array(
         'name' => 'Opis',
-        'id'   => 'text',
+        'id'   => 'price',
         'type' => 'textarea',
-        'sanitization_cb' => false,
     ) );
     $page->add_group_field( $blog_group_id, array(
         'name' => 'Cena',

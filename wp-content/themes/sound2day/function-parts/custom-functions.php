@@ -24,7 +24,7 @@
 
     add_image_size( 'sliderImg', 200, 125 );
 
-    /*---------------------------------------------------*/
+/*---------------------------------------------------*/
 /*                    WINES POST TYPE                        */
 /*---------------------------------------------------*/
 
@@ -64,6 +64,9 @@ function create_post_types() {
         'hierarchical' => false,
         'posts_per_archive_page' => 50
     ));
+
 }
 
 add_action('init', 'create_post_types');
+
+?>
