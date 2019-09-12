@@ -169,6 +169,7 @@ include locate_template('function-parts/custom-functions.php');
 
 function custom_fields() {
     include(locate_template('function-parts/home-fields.php'));
+    include(locate_template('function-parts/about-fields.php'));
 }
 
 add_action('cmb2_init', 'custom_fields');

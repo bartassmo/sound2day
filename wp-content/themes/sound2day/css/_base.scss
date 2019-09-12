@@ -101,9 +101,16 @@ body {
 }
 
 .page-header {
+    margin-top: 65px;
     &__title {
-        font-size: 24px;
+        font-size: 26px;
         color: $cWhite;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        font-weight: 500;
+        @media #{$mobile} {
+            font-size: 30px;
+        }
     }
 }
 
@@ -112,7 +119,6 @@ body {
     font-family: $fComfortaa;
     font-weight: 600;
     margin: 0;
-    text-transform: uppercase;
     color: $cDark;
     display: inline-flex;
     flex-direction: column;
@@ -125,8 +131,14 @@ body {
     @media #{$sTablet} {
         font-size: 22px;
     }
+    @media #{$tablet} {
+        font-size: 24px;
+    }
     @media #{$sDesktop} {
         font-size: 26px;
+    }
+    @media #{$desktop} {
+        font-size: 28px;
     }
     &__box {
         display: flex;
@@ -145,11 +157,22 @@ body {
         content: '';
         display: inline-block;
         height: 2px;
-        width: 25px;
         background-color: $cPrimary;
-        margin-top: 5px;
+        width: 15px;
+        @media #{$sTablet} {
+            width: 20px;
+            margin-top: 3px;
+        }
+        @media #{$sDesktop} {
+            width: 25px;
+            margin-top: 5px;
+        }
     }
     &--center {
         text-align: center;
+    }
+    &--left {
+        align-self: flex-start;
+        align-items: flex-start;
     }
 }
