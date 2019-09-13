@@ -22,8 +22,20 @@
         </div>
     </div>
 </section>
-<section class="services bPadding">
+<section class="rentals bPadding">
     <div class="container">
+        <div class="rentals__container">
+    <?php
+        $seeAlso = new WP_Query( array(
+            'post_type' => 'service',
+            'posts_per_page' => -1,
+            'orderby' => 'rand',
+            ) );
+            ?>
+    <?php while( $seeAlso->have_posts() ) : $seeAlso->the_post();
+        include(locate_template('template-parts/rental-item.php') );
+    endwhile; wp_reset_query(); ?>
+    </div>
     </div>
 </section>
 
