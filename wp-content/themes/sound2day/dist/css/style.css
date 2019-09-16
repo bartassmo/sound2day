@@ -763,6 +763,9 @@ body {
     display: -ms-inline-flexbox;
     display: inline-flex; }
 
+.sidebar {
+  background-color: #f7f7f7; }
+
 .services {
   display: block; }
   .services__container {
@@ -777,7 +780,9 @@ body {
     @media only screen and (min-width: 767px) {
       .services__container {
         -ms-flex-direction: row;
-            flex-direction: row; } }
+            flex-direction: row;
+        -ms-flex-pack: center;
+            justify-content: center; } }
 
 .service-item {
   display: -ms-inline-flexbox;
@@ -803,7 +808,7 @@ body {
         width: 100%; } }
   @media only screen and (min-width: 1279px) {
     .service-item {
-      width: calc(33.33% - 30px);
+      width: auto;
       -ms-flex-pack: start;
           justify-content: flex-start; } }
   .service-item__inner {
