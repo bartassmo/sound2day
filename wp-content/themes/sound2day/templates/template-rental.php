@@ -29,7 +29,7 @@
         $seeAlso = new WP_Query( array(
             'post_type' => 'rental',
             'posts_per_page' => -1,
-            'orderby' => 'rand',
+            'orderby' => 'menu_order',
             ) );
             ?>
     <?php while( $seeAlso->have_posts() ) : $seeAlso->the_post();

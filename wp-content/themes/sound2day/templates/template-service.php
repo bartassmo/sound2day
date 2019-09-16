@@ -22,18 +22,18 @@
         </div>
     </div>
 </section>
-<section class="rentals bPadding">
+<section class="services bPadding">
     <div class="container">
-        <div class="rentals__container">
+        <div class="services__container">
     <?php
         $seeAlso = new WP_Query( array(
             'post_type' => 'service',
             'posts_per_page' => -1,
-            'orderby' => 'rand',
+            'orderby' => 'menu_order',
             ) );
             ?>
     <?php while( $seeAlso->have_posts() ) : $seeAlso->the_post();
-        include(locate_template('template-parts/rental-item.php') );
+        include(locate_template('template-parts/service-item.php') );
     endwhile; wp_reset_query(); ?>
     </div>
     </div>
