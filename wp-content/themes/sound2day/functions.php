@@ -105,7 +105,7 @@ add_action( 'after_setup_theme', 'sound2day_content_width', 0 );
  */
 function sound2day_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Adres', 'sound2day' ),
+		'name'          => esc_html__( 'Dane kontaktowe', 'sound2day' ),
 		'id'            => 'address-footer',
 		'description'   => esc_html__( 'Dodaj widgety:', 'sound2day' ),
 		'before_widget' => '',

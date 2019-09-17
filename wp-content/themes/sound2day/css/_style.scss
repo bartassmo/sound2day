@@ -243,6 +243,100 @@
 
 .sidebar {
     background-color: $cBackground;
+    @media #{$sTablet} {
+        width: 40%;
+    }
+    @media #{$sDesktop} {
+        width: 25%;
+    }
+    &__content {
+        padding-left: 15px;
+        @media #{$mobile} {
+            padding-left: 35px;
+        }
+        @media #{$sTablet} {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        @media #{$tablet} {
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+    }
+    &__title {
+        display: inline-block;
+        font-size: 17px;
+        font-family: $fComfortaa;
+        font-weight: 600;
+        @media #{$mobile} {
+            font-size: 18px;
+        }
+        @media #{$sTablet} {
+            font-size: 20px;
+        }
+        @media #{$tablet} {
+            font-size: 22px;
+        }
+    }
+    &__list {
+        list-style-type: none;
+        margin: 0;
+        margin-top: 15px;
+        @media #{$sTablet} {
+            margin-top: 25px;
+        }
+    }
+    &__item {
+        font-family: $fComfortaa;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        display: inline-flex;
+        width: 100%;
+        align-items: center;
+        @media #{$mobile} {
+            font-size: 16px;
+        }
+        @media #{$sTablet} {
+            margin-top: 9px;
+            margin-bottom: 9px;
+            width: 100%;
+            font-size: 17px;
+        }
+        @media #{$tablet} {
+            font-size: 18px;
+        }
+        &::before {
+            content: '';
+            width: 4px;
+            height: 4px;
+            transform: rotate(45deg);
+            background-color: $cPrimary;
+            display: inline-block;
+            margin-right: 5px;
+        }
+    }
+    &__link {
+        color: $cDark;
+        text-decoration: none;
+        position: relative;
+        display: inline-flex;
+        flex-direction: column;
+        @media #{$sTablet} {
+            width: auto;
+        }
+        &::after {
+            content: '';
+            height: 1px;
+            width: 10%;
+            background-color: $cPrimary;
+            @include animate;
+        }
+        &:hover {
+            &::after {
+                width: 100%;
+            }
+        }
+    }
 }
 
 .services {
@@ -255,6 +349,58 @@
         @media #{$mobile} {
             flex-direction: row;
             justify-content: center;
+        }
+    }
+}
+
+.service {
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: $fComfortaa;
+        font-weight: 600;
+    }
+    p {
+        margin-bottom: 1em;
+    }
+    @media #{$sTablet} {
+        flex-direction: row;
+        justify-content: space-between;
+        font-size: 16px;
+    }
+    @media #{$tablet} {
+        font-size: 17px;
+    }
+    @media #{$sDesktop} {
+        font-size: 18px;
+    }
+    &__container {
+        padding-left: 15px;
+        padding-right: 15px;
+        @media #{$mobile} {
+            padding-left: 35px;
+            padding-right: 35px;
+        }
+        @media #{$sTablet} {
+            padding-left: 3%;
+            width: 60%;
+        }
+        @media #{$tablet} {
+            padding-left: 5%;
+            padding-right: 5%;
+        }
+        @media #{$sDesktop} {
+            padding-left: 7%;
+            width: 75%;
+        }
+        @media #{$desktop} {
+            padding-left: 9%;
         }
     }
 }
@@ -306,9 +452,6 @@
             rgba(32, 32, 32, 0)
         );
         padding: 10px;
-        @media #{$sTablet} {
-            padding: 15px;
-        }
     }
     &__layer {
         width: 100%;
