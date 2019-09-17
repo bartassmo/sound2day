@@ -12,21 +12,15 @@
 ?>
 
 <footer class="footer">
-    <div class="container nPadding">
+    <div class="container sPadding">
         <div class="footer__container">
             <div class="footer__col">
-                <a href="<?php echo site_url(); ?>" class="header__logo"><?php echo getSvgContent(locate_template('dist/img/svg/logo-white.svg')); ?></a>
+                <a href="<?php echo site_url(); ?>" class="header__logo footer__logo"><?php echo getSvgContent(locate_template('dist/img/svg/logo-white.svg')); ?></a>
             </div>
             <div class="footer__col">
                 <address class="footer__address">
                     <?php dynamic_sidebar( 'address-footer' ); ?> 
                 </address>
-            </div>
-            <div class="footer__col">
-    
-            </div>
-            <div class="footer__col">
-    
             </div>
         </div>
     </div>

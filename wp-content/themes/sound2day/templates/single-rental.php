@@ -15,36 +15,38 @@
         </div>
     </div>
 </section>
-<section class="rental bPadding">
-    <div class="container">
-    <?php 
-        foreach($rentalGroup as $elem) { ?>
-            <div class="info__block">
-                <div class="info__img" style="background-image: url(<?php echo $elem['img'] ?>);"></div>
-                <div class="info__content">
-                    <span class="info__title"><?php echo $elem['name'] ?></span>
-                    <span class="info__text"><?php echo $elem['text'] ?></span>
-                    <span class="info__text"><?php echo $elem['price'] ?></span>
+<section class="service">
+    <div class="service__container rental__container bPadding">
+        <?php foreach($rentalGroup as $elem) { ?>
+            <div class="rental__block">
+                <div class="rental__content">
+                    <div class="rental__img"><img src="<?php echo $elem['img'] ?>" alt=""></div>
+                    <span class="rental__title"><?php echo $elem['name'] ?></span>
+                    <div class="rental__text"><p><?php echo $elem['price'] ?></p></div>
+                    <div class="rental__price"><span>Cena wynajmu: <?php echo $elem['text'] ?></span></div>
                 </div>
             </div>
         <?php } ?>
     </div>
-    <aside class="sidebar bPadding">
-    <div class="sidebar__content">
-    <?php
-        $current = get_the_id();
-        $seeAlso = new WP_Query( array(
-            'post_type' => 'service',
-            'posts_per_page' => -1,
-            'orderby' => 'random',
-            'post__not_in'  => array($current),
-            ) );
-            ?>
-    <?php while( $seeAlso->have_posts() ) : $seeAlso->the_post();
-        echo get_the_title();
-    endwhile; wp_reset_query(); ?>
-    </div>
-</aside>
+    <aside class="sidebar">
+        <div class="sidebar__content bPadding">
+            <span class="sidebar__title">Zobacz również</span>
+            <ul class="sidebar__list">
+                <?php
+                    $current = get_the_id();
+                    $seeAlso = new WP_Query( array(
+                        'post_type' => 'rental',
+                        'posts_per_page' => 6,
+                        'orderby' => 'rand',
+                        'post__not_in'  => array($current),
+                        ) );
+                        ?>
+                <?php while( $seeAlso->have_posts() ) : $seeAlso->the_post(); ?>
+                    <li class="sidebar__item"><a href="<?php echo get_the_permalink(); ?>" class="sidebar__link"><?php echo get_the_title(); ?></a></li>
+                <?php endwhile; wp_reset_query(); ?>
+            </ul>
+        </div>
+    </aside>
 </section>
 
 <?php include(locate_template('footer.php')); ?> 

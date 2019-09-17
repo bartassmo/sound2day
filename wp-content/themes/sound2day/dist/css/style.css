@@ -444,29 +444,38 @@ h6 {
         flex-direction: column;
     -ms-flex-align: center;
         align-items: center; }
-    @media only screen and (min-width: 1023px) {
-      .footer__container {
-        -ms-flex-align: start;
-            align-items: flex-start;
-        -ms-flex-direction: row;
-            flex-direction: row; } }
+  .footer__logo {
+    height: 57px; }
   .footer__col {
     display: -ms-inline-flexbox;
     display: inline-flex;
     -ms-flex-positive: 1;
-        flex-grow: 1; }
+        flex-grow: 1;
+    margin-bottom: 15px; }
   .footer__text {
-    font-size: 16px;
     color: #ffffff; }
   .footer__address {
     color: #ffffff;
     font-size: 16px;
+    font-weight: 500;
     text-align: center;
     margin: 15px 0; }
     @media only screen and (min-width: 1023px) {
       .footer__address {
         text-align: left;
-        margin: 0; } }
+        margin: 0;
+        font-size: 18px; } }
+    .footer__address a {
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: 300;
+      display: inline-block;
+      text-decoration: none;
+      margin-bottom: 5px;
+      margin-left: 5px; }
+      @media only screen and (min-width: 1023px) {
+        .footer__address a {
+          font-size: 18px; } }
 
 /* Slider */
 .slick-slider {
@@ -741,54 +750,229 @@ h6 {
       width: 50%;
       transform: translateX(22%); } }
 
-.rentals__container {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-      flex-direction: column;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap; }
-  @media only screen and (min-width: 1023px) {
-    .rentals__container {
-      -ms-flex-direction: row;
-          flex-direction: row;
-      padding: 0 85px; } }
+.rentals {
+  background: #f7f7f7; }
+  .rentals__container {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+    @media only screen and (min-width: 1023px) {
+      .rentals__container {
+        padding: 0 85px; } }
 
 .rental-item {
   display: -ms-inline-flexbox;
   display: inline-flex;
   width: 100%;
-  position: relative; }
+  position: relative;
+  border-radius: 5px; }
+  @media only screen and (min-width: 767px) {
+    .rental-item {
+      width: calc(50% - 30px);
+      -ms-flex-pack: center;
+          justify-content: center;
+      margin: 0 15px 15px; } }
   @media only screen and (min-width: 1023px) {
     .rental-item {
-      padding: 30px;
-      border: 2px solid #548d9b;
-      border-radius: 5px;
+      border-radius: 10px;
       width: calc(33.33% - 30px);
-      margin: 15px; } }
-  .rental-item__name {
+      margin: 15px; }
+      .rental-item:hover .rental-item__layer {
+        background-color: rgba(32, 32, 32, 0.75); }
+      .rental-item:hover .rental-item__text {
+        transform: translateY(-10px); }
+      .rental-item:hover .rental-item__name::after {
+        width: 100%; } }
+  @media only screen and (min-width: 1279px) {
+    .rental-item {
+      -ms-flex-pack: start;
+          justify-content: flex-start; } }
+  @media only screen and (min-width: 1365px) {
+    .rental-item {
+      width: calc(25% - 30px); } }
+  .rental-item__inner {
+    position: relative;
+    overflow: hidden;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-align: center;
+        align-items: center;
+    -ms-flex-pack: center;
+        justify-content: center; }
+  .rental-item__gradient {
     position: absolute;
-    top: 0;
-    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    background: linear-gradient(0deg, #141414 0, rgba(32, 32, 32, 0.05) 25%, rgba(32, 32, 32, 0)); }
+  .rental-item img {
+    width: 85%; }
+  .rental-item__layer {
     width: 100%;
     height: 100%;
     display: -ms-inline-flexbox;
     display: inline-flex;
-    -ms-flex-align: start;
-        align-items: flex-start;
-    -ms-flex-pack: center;
-        justify-content: center;
-    text-align: center;
-    font-size: 26px;
-    font-family: "Comfortaa", cursive;
-    font-weight: 500;
-    padding: 10px;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
+    -ms-flex-align: end;
+        align-items: flex-end;
+    border: 1px solid #548d9b;
+    background-color: rgba(32, 32, 32, 0);
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    padding: 10px; }
+    @media only screen and (min-width: 1023px) {
+      .rental-item__layer {
+        border: 2px solid #548d9b;
+        padding: 15px; } }
+  .rental-item__name {
+    width: 100%;
     text-align: center; }
+    @media only screen and (min-width: 1023px) {
+      .rental-item__name {
+        text-align: left; } }
   .rental-item__text {
-    display: inline-block; }
-  .rental-item__img {
-    display: -ms-inline-flexbox;
-    display: inline-flex; }
+    color: #ffffff;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 17px;
+    font-family: "Comfortaa", cursive;
+    letter-spacing: 0.05em;
+    line-height: 1.2;
+    transition: all 0.3s ease-in-out; }
+    @media only screen and (min-width: 767px) {
+      .rental-item__text {
+        font-size: 18px;
+        line-height: 1.3; } }
+    @media only screen and (min-width: 1023px) {
+      .rental-item__text {
+        line-height: 1.4;
+        font-size: 20px; } }
+
+.rental__block {
+  border: 1px solid #548d9b;
+  position: relative;
+  margin-bottom: 25px; }
+  @media only screen and (min-width: 767px) {
+    .rental__block {
+      width: calc(50% - 30px);
+      margin: 0 15px 30px; } }
+  @media only screen and (min-width: 1279px) {
+    .rental__block {
+      width: 100%;
+      margin: 0;
+      margin-bottom: 35px; } }
+  @media only screen and (min-width: 1365px) {
+    .rental__block {
+      width: 95%; } }
+
+@media only screen and (min-width: 767px) {
+  .rental__container {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; } }
+
+.rental__content {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-direction: column;
+      flex-direction: column; }
+  @media only screen and (min-width: 1279px) {
+    .rental__content {
+      -ms-flex-direction: row;
+          flex-direction: row;
+      -ms-flex-align: stretch;
+          align-items: stretch; } }
+
+.rental__img {
+  border-radius: 7px;
+  overflow: hidden;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  padding-top: 35px;
+  max-width: 320px; }
+  @media only screen and (min-width: 767px) {
+    .rental__img {
+      max-width: 100%; } }
+  @media only screen and (min-width: 1279px) {
+    .rental__img {
+      width: 25%;
+      padding-top: 15px;
+      border-right: 1px solid #548d9b; } }
+  @media only screen and (min-width: 1365px) {
+    .rental__img {
+      width: 20%; } }
+
+.rental__title {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ffffff;
+  border: 1px solid #74a4b4;
+  border-top: 0;
+  padding: 5px;
+  padding-top: 7px;
+  text-align: center;
+  border-radius: 0 0 5px 5px;
+  font-family: "Comfortaa", cursive;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  width: 90%;
+  font-size: 16px; }
+  @media only screen and (min-width: 1279px) {
+    .rental__title {
+      width: 75%;
+      font-size: 21px; } }
+
+.rental__text {
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-align: center;
+      align-items: center;
+  padding: 0 15px 0; }
+  @media only screen and (min-width: 1279px) {
+    .rental__text {
+      border-right: 1px solid #548d9b;
+      padding: 55px 15px 0;
+      width: 55%; } }
+  @media only screen and (min-width: 1365px) {
+    .rental__text {
+      width: 60%; } }
+
+.rental__price {
+  width: 100%;
+  border-top: 1px solid #548d9b;
+  padding: 5px;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  font-size: 16px; }
+  @media only screen and (min-width: 1279px) {
+    .rental__price {
+      width: 20%;
+      border-top: 0;
+      font-size: 17px; } }
+  .rental__price span {
+    display: inline-block;
+    color: #141414;
+    font-weight: 500; }
 
 .sidebar {
   background-color: #f7f7f7; }

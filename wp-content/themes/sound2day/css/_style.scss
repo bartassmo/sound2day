@@ -195,12 +195,12 @@
 }
 
 .rentals {
+    background: $cBackground;
     &__container {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         flex-wrap: wrap;
         @media #{$sTablet} {
-            flex-direction: row;
             padding: 0 85px;
         }
     }
@@ -210,34 +210,209 @@
     display: inline-flex;
     width: 100%;
     position: relative;
+    border-radius: 5px;
+    @media #{$mobile} {
+        width: calc(50% - 30px);
+        justify-content: center;
+        margin: 0 15px 15px;
+    }
     @media #{$sTablet} {
-        padding: 30px;
-        border: 2px solid $cPrimary;
-        border-radius: 5px;
+        border-radius: 10px;
         width: calc(33.33% - 30px);
         margin: 15px;
+        &:hover {
+            .rental-item {
+                &__layer {
+                    background-color: rgba(32, 32, 32, 0.75);
+                }
+                &__text {
+                    transform: translateY(-10px);
+                }
+                &__name::after {
+                    width: 100%;
+                }
+            }
+        }
     }
-    &__name {
+    @media #{$tablet} {
+        justify-content: flex-start;
+    }
+    @media #{$sDesktop} {
+        width: calc(25% - 30px);
+    }
+    &__inner {
+        position: relative;
+        overflow: hidden;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__gradient {
         position: absolute;
-        top: 0;
-        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+        background: linear-gradient(
+            0deg,
+            #141414 0,
+            rgba(32, 32, 32, 0.05) 25%,
+            rgba(32, 32, 32, 0)
+        );
+    }
+    img {
+        width: 85%;
+    }
+    &__layer {
         width: 100%;
         height: 100%;
         display: inline-flex;
-        align-items: flex-start;
-        justify-content: center;
-        text-align: center;
-        font-size: 26px;
-        font-family: $fComfortaa;
-        font-weight: 500;
+        justify-content: flex-start;
+        align-items: flex-end;
+        border: 1px solid #548d9b;
+        background-color: rgba(32, 32, 32, 0);
+        overflow: hidden;
+        transition: all 0.3s ease-in-out;
         padding: 10px;
+        @media #{$sTablet} {
+            border: 2px solid $cPrimary;
+            padding: 15px;
+        }
+    }
+    &__name {
+        width: 100%;
         text-align: center;
+        @media #{$sTablet} {
+            text-align: left;
+        }
     }
     &__text {
+        color: $cWhite;
         display: inline-block;
+        font-weight: 600;
+        font-size: 17px;
+        font-family: $fComfortaa;
+        letter-spacing: 0.05em;
+        line-height: 1.2;
+        @include animate;
+        @media #{$mobile} {
+            font-size: 18px;
+            line-height: 1.3;
+        }
+        @media #{$sTablet} {
+            line-height: 1.4;
+            font-size: 20px;
+        }
+    }
+}
+
+.rental {
+    &__block {
+        border: 1px solid $cPrimary;
+        position: relative;
+        margin-bottom: 25px;
+        @media #{$mobile} {
+            width: calc(50% - 30px);
+            margin: 0 15px 30px;
+        }
+        @media #{$tablet} {
+            width: 100%;
+            margin: 0;
+            margin-bottom: 35px;
+        }
+        @media #{$sDesktop} {
+            width: 95%;
+        }
+    }
+    &__container {
+        @media #{$mobile} {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+    }
+    &__content {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        @media #{$tablet} {
+            flex-direction: row;
+            align-items: stretch;
+        }
     }
     &__img {
+        border-radius: 7px;
+        overflow: hidden;
         display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 35px;
+        max-width: 320px;
+        @media #{$mobile} {
+            max-width: 100%;
+        }
+        @media #{$tablet} {
+            width: 25%;
+            padding-top: 15px;
+            border-right: 1px solid $cPrimary;
+        }
+        @media #{$sDesktop} {
+            width: 20%;
+        }
+    }
+    &__title {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: $cWhite;
+        border: 1px solid $cLPrimary;
+        border-top: 0;
+        padding: 5px;
+        padding-top: 7px;
+        text-align: center;
+        border-radius: 0 0 5px 5px;
+        font-family: $fComfortaa;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        width: 90%;
+        font-size: 16px;
+        @media #{$tablet} {
+            width: 75%;
+            font-size: 21px;
+        }
+    }
+    &__text {
+        display: inline-flex;
+        align-items: center;
+        padding: 0 15px 0;
+        @media #{$tablet} {
+            border-right: 1px solid $cPrimary;
+            padding: 55px 15px 0;
+            width: 55%;
+        }
+        @media #{$sDesktop} {
+            width: 60%;
+        }
+    }
+    &__price {
+        width: 100%;
+        border-top: 1px solid $cPrimary;
+        padding: 5px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        @media #{$tablet} {
+            width: 20%;
+            border-top: 0;
+            font-size: 17px;
+        }
+        span {
+            display: inline-block;
+            color: $cDark;
+            font-weight: 500;
+        }
     }
 }
 

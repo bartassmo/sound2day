@@ -30,7 +30,7 @@
                     $current = get_the_id();
                     $seeAlso = new WP_Query( array(
                         'post_type' => 'service',
-                        'posts_per_page' => -1,
+                        'posts_per_page' => 6,
                         'orderby' => 'rand',
                         'post__not_in'  => array($current),
                         ) );
