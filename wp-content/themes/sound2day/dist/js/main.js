@@ -10722,6 +10722,7 @@ $(document).ready(function() {
         speed: 5000,
         cssEase: 'linear'
     });
+    $('.wpcf7-form-control').after('<span class="contact__after"></span>');
 });
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))

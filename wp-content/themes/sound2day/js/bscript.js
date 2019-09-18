@@ -29,4 +29,5 @@ $(document).ready(function() {
         speed: 5000,
         cssEase: 'linear'
     });
+    $('.wpcf7-form-control').after('<span class="contact__after"></span>');
 });

@@ -17,7 +17,7 @@
             <div class="footer__col">
                 <a href="<?php echo site_url(); ?>" class="header__logo footer__logo"><?php echo getSvgContent(locate_template('dist/img/svg/logo-white.svg')); ?></a>
             </div>
-            <div class="footer__col">
+            <div class="footer__col footer__col--address">
                 <address class="footer__address">
                     <?php dynamic_sidebar( 'address-footer' ); ?> 
                 </address>

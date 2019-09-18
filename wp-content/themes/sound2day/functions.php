@@ -172,6 +172,7 @@ function custom_fields() {
     include(locate_template('function-parts/about-fields.php'));
     include(locate_template('function-parts/rental-fields.php'));
     include(locate_template('function-parts/service-fields.php'));
+    include(locate_template('function-parts/contact-fields.php'));
 }
 
 add_action('cmb2_init', 'custom_fields');
