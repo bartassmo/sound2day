@@ -692,13 +692,27 @@
         }
     }
     &__details {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 25px;
         @media #{$sTablet} {
             width: 30%;
+            margin-top: 0;
+        }
+        @media #{$tablet} {
+            padding-left: 50px;
         }
     }
     &__form {
+        max-width: 700px;
         @media #{$sTablet} {
-            order: 1;
+            max-width: none;
+            width: 70%;
+            padding-right: 25px;
+        }
+        @media #{$tablet} {
+            padding-right: 0;
         }
     }
     &__row {
@@ -718,8 +732,9 @@
             margin-right: 30px;
         }
         @media #{$tablet} {
-            width: calc(25% - 30px);
+            width: calc(25% - 20px);
             margin-bottom: 0;
+            margin-right: 20px;
             &:last-of-type {
                 margin-right: 0;
                 width: 25%;
@@ -788,11 +803,8 @@
     }
     &__btn {
         display: flex;
-        justify-content: flex-end;
+        justify-content: center;
         margin-top: 25px;
-        @media #{$sTablet} {
-            margin-right: 30px;
-        }
         @media #{$tablet} {
             margin-top: 0;
             margin-right: 0;
@@ -801,31 +813,132 @@
     &__submit {
         background-color: transparent;
         border: 0;
+        padding: 8px 11px;
+        display: inline-block;
+        text-decoration: none;
+        text-transform: uppercase;
+        position: relative;
+        &::after,
+        &::before {
+            content: '';
+            position: absolute;
+            display: block;
+            background-color: $cPrimary;
+            width: 0%;
+            height: 2px;
+            @include animate;
+        }
+        &::before {
+            top: 0;
+            right: 0;
+        }
+        &::after {
+            bottom: 0;
+            left: 0;
+        }
+        &:hover {
+            &::before,
+            &::after {
+                width: 100%;
+            }
+
+            .contact__more {
+                &::before,
+                &::after {
+                    height: 100%;
+                }
+            }
+        }
     }
     &__more {
         margin: 0;
         color: #2d3a4b;
         align-items: center;
+        display: block;
+        font-size: 14px;
+        width: 100%;
+        height: 100%;
         cursor: pointer;
-        &::after {
-            content: none;
+        &::after,
+        &::before {
+            content: '';
+            position: absolute;
+            display: block;
+            background-color: $cPrimary;
+            width: 2px;
+            height: 0%;
+            @include animate;
+            transition-delay: 0.3s;
         }
-        .more__arrow {
-            display: inline-flex;
-            margin-left: 9px;
+        &::after {
+            bottom: 0;
+            right: 0;
+        }
+        &::before {
+            top: 0;
+            left: 0;
         }
     }
-    &__map__container {
-        width: 100%;
-        height: 300px;
-        @media #{$mobile} {
-            height: 450px;
-        }
+    &__logo {
+        display: inline-block;
+        max-width: 200px;
+        margin-bottom: 25px;
         @media #{$sTablet} {
-            height: 520px;
+            max-width: 215px;
         }
-        @media #{$sDesktop} {
-            height: 580px;
+    }
+    &__title {
+        display: inline-block;
+        font-size: 19px;
+        margin-bottom: 15px;
+    }
+    &__link {
+        display: inline-flex;
+        align-items: center;
+        color: $cDark;
+        text-decoration: none;
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+    &--tel {
+        &::before {
+            content: url(../img/phone.png);
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 32px;
+            margin-right: 7px;
+            @include animate();
+            @media #{$tablet} {
+                margin-right: 10px;
+            }
+        }
+        &:hover {
+            &::before {
+                transform: rotate(35deg);
+            }
+        }
+    }
+    &--mail {
+        &::before {
+            content: url(../img/mail.png);
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 32px;
+            margin-right: 7px;
+            @include animate();
+            @media #{$tablet} {
+                margin-right: 10px;
+            }
+        }
+        &:hover {
+            &::before {
+                transform: translateX(3px);
+                @media #{$tablet} {
+                    transform: translateX(7px);
+                }
+            }
         }
     }
 }

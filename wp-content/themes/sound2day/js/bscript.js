@@ -1,6 +1,5 @@
 function checkScroll() {
-    if ($(window).scrollTop() > 100) {
-        //abuse 0 == false :)
+    if ($(window).scrollTop() > 60) {
         if (!$('.header').hasClass('scrolled')) {
             $('.header').addClass('scrolled');
         }

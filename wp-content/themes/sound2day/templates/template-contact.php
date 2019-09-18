@@ -31,9 +31,10 @@
             <?php echo do_shortcode( '[contact-form-7 id="5" title="Podstrona Kontakt"]' ); ?>
         </div>
         <div class="contact__details">
-        <a href="<?php echo site_url(); ?>" class="header__logo"><?php echo getSvgContent(locate_template('dist/img/svg/logo-black.svg')); ?></a>
+        <img src="<?php echo get_template_directory_uri(); ?>/dist/img/logo-black.png" alt="Sound2day" class="contact__logo">
             <span class="contact__title"><?php echo $contactTitle; ?></span>
-
+            <a href="tel:<?php echo $contactTel; ?>" class="contact__link contact--tel"><?php echo $contactTel; ?></a>
+            <a href="tel:<?php echo $contactMail; ?>" class="contact__link contact--mail"><?php echo $contactMail; ?></a>
         </div>
     </div>
 </section>
