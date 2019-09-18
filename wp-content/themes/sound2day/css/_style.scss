@@ -685,8 +685,9 @@
 
 .contact {
     &__container {
+        display: flex;
+        flex-direction: column;
         @media #{$sTablet} {
-            display: flex;
             flex-direction: row;
         }
     }
@@ -696,9 +697,8 @@
         }
     }
     &__form {
-        order: 1;
         @media #{$sTablet} {
-            order: 0;
+            order: 1;
         }
     }
     &__row {
@@ -712,7 +712,7 @@
     }
     &__el {
         position: relative;
-        margin-bottom: 25px;
+        margin-bottom: 20px;
         @media #{$sTablet} {
             width: calc(50% - 30px);
             margin-right: 30px;
@@ -728,6 +728,7 @@
     }
     &__full {
         width: 100%;
+        position: relative;
         @media #{$sTablet} {
             margin-right: 30px;
         }
@@ -736,16 +737,25 @@
         }
     }
     &__text {
-        font-size: 13px;
+        font-size: 14px;
         font-weight: 500;
-        color: #010927;
+        color: $cDark;
         text-transform: uppercase;
+        position: absolute;
+        top: -3px;
+        left: 0;
+        display: inline-block;
+        z-index: 5;
+        background-color: $cWhite;
+        padding: 0 5px;
+        line-height: 1;
+        @include animate;
     }
     &__wrapper {
         position: relative;
     }
     &__input {
-        padding: 0 15px;
+        padding: 15px 15px 0;
         font-size: 15px;
         font-style: italic;
         color: #010101;
@@ -772,7 +782,7 @@
             display: block;
             width: 0%;
             height: 2px;
-            background-color: #010927;
+            background-color: $cPrimary;
             transition: all 0.5s ease;
         }
     }
@@ -821,7 +831,7 @@
 }
 
 .wpcf7-form-control-wrap {
-    padding-bottom: 10px;
+    padding-bottom: 6px;
 }
 
 .wpcf7-form-control {

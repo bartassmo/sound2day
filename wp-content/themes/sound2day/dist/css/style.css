@@ -1235,24 +1235,24 @@ h6 {
         font-size: 20px;
         line-height: 1.4; } }
 
-@media only screen and (min-width: 1023px) {
-  .contact__container {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: row;
-        flex-direction: row; } }
+.contact__container {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column; }
+  @media only screen and (min-width: 1023px) {
+    .contact__container {
+      -ms-flex-direction: row;
+          flex-direction: row; } }
 
 @media only screen and (min-width: 1023px) {
   .contact__details {
     width: 30%; } }
 
-.contact__form {
-  -ms-flex-order: 1;
-      order: 1; }
-  @media only screen and (min-width: 1023px) {
-    .contact__form {
-      -ms-flex-order: 0;
-          order: 0; } }
+@media only screen and (min-width: 1023px) {
+  .contact__form {
+    -ms-flex-order: 1;
+        order: 1; } }
 
 .contact__row {
   display: -ms-flexbox;
@@ -1269,7 +1269,7 @@ h6 {
 
 .contact__el {
   position: relative;
-  margin-bottom: 25px; }
+  margin-bottom: 20px; }
   @media only screen and (min-width: 1023px) {
     .contact__el {
       width: calc(50% - 30px);
@@ -1283,7 +1283,8 @@ h6 {
         width: 25%; } }
 
 .contact__full {
-  width: 100%; }
+  width: 100%;
+  position: relative; }
   @media only screen and (min-width: 1023px) {
     .contact__full {
       margin-right: 30px; } }
@@ -1292,16 +1293,25 @@ h6 {
       margin-right: 0; } }
 
 .contact__text {
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 500;
-  color: #010927;
-  text-transform: uppercase; }
+  color: #141414;
+  text-transform: uppercase;
+  position: absolute;
+  top: -3px;
+  left: 0;
+  display: inline-block;
+  z-index: 5;
+  background-color: #ffffff;
+  padding: 0 5px;
+  line-height: 1;
+  transition: all 0.3s ease-in-out; }
 
 .contact__wrapper {
   position: relative; }
 
 .contact__input {
-  padding: 0 15px;
+  padding: 15px 15px 0;
   font-size: 15px;
   font-style: italic;
   color: #010101;
@@ -1325,7 +1335,7 @@ h6 {
     display: block;
     width: 0%;
     height: 2px;
-    background-color: #010927;
+    background-color: #548d9b;
     transition: all 0.5s ease; }
 
 .contact__btn {
@@ -1373,7 +1383,7 @@ h6 {
       height: 580px; } }
 
 .wpcf7-form-control-wrap {
-  padding-bottom: 10px; }
+  padding-bottom: 6px; }
 
 .wpcf7-form-control {
   resize: none; }
