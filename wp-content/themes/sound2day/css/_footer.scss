@@ -11,7 +11,10 @@
         }
     }
     &__logo {
-        height: 57px;
+        height: 33px;
+        @media #{$sTablet} {
+            height: 57px;
+        }
     }
     &__col {
         display: inline-flex;
@@ -37,16 +40,50 @@
             margin: 0;
             font-size: 18px;
         }
-        a {
-            color: $cWhite;
-            font-size: 16px;
-            font-weight: 300;
-            display: inline-block;
-            text-decoration: none;
-            margin-bottom: 5px;
-            margin-left: 5px;
-            @media #{$sTablet} {
-                font-size: 18px;
+    }
+    &__link {
+        color: $cWhite;
+        font-size: 16px;
+        font-weight: 300;
+        display: inline-flex;
+        align-items: center;
+        text-decoration: none;
+        margin-bottom: 10px;
+        @media #{$sTablet} {
+            font-size: 18px;
+        }
+        &::before {
+            content: '';
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 33px;
+            margin-right: 13px;
+            pointer-events: none;
+            @include animate;
+        }
+        &--tel {
+            &::before {
+                content: url(../img/phone-white.png);
+            }
+            &:hover {
+                &::before {
+                    transform: rotate(35deg);
+                }
+            }
+        }
+        &--mail {
+            &::before {
+                content: url(../img/mail-white.png);
+                transition-timing-function: cubic-bezier(1, -2.78, 0.735, 0.045);
+            }
+            &:hover {
+                &::before {
+                    transform: translateX(3px);
+                    @media #{$tablet} {
+                        transform: translateX(7px);
+                    }
+                }
             }
         }
     }

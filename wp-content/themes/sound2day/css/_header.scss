@@ -1,15 +1,15 @@
 .header {
-    background-color: rgba(51, 50, 50, 0);
+    background-color: rgba(20, 20, 20, 0.7);
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 100;
     @include animate;
-    border-bottom: 1px solid rgba(51, 50, 50, 0.5);
+    border-bottom: 1px solid rgba(20, 20, 20, 0.5);
     &.scrolled {
-        background-color: rgba(51, 50, 50, 1);
-        border-bottom-color: rgba(51, 50, 50, 1);
+        background-color: rgba(21, 20, 20, 1);
+        border-bottom-color: rgba(21, 20, 20, 1);
         .header {
             &__container {
                 @media #{$tablet} {

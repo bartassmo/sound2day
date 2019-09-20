@@ -22,7 +22,7 @@
         }
     }
 
-    add_image_size( 'sliderImg', 200, 125 );
+    add_image_size( 'sliderImg', 300, 100 );
 
 /*---------------------------------------------------*/
 /*                    WINES POST TYPE                        */
