@@ -16,7 +16,7 @@ $producentsTitle = get_post_meta( get_the_id(), 'producents-title', true);
 
 <?php include(locate_template('header.php')); ?>
 
-<section class="">
+<section class="slider">
     <div class="slider__slick">
         <div class="slider__wrapper" id="slick" >
             <?php 

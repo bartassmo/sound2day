@@ -10692,7 +10692,7 @@ __webpack_require__(0);
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function($) {function checkScroll() {
-    if ($(window).scrollTop() > 60) {
+    if ($(window).scrollTop() > 100) {
         if (!$('.header').hasClass('scrolled')) {
             $('.header').addClass('scrolled');
         }

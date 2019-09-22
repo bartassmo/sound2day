@@ -1,4 +1,14 @@
 .slider {
+    margin-top: 75px;
+    @media #{$mobile} {
+        margin-top: 85px;
+    }
+    @media #{$tablet} {
+        margin-top: 100px;
+    }
+    @media #{$sDesktop} {
+        margin-top: 108px;
+    }
     &__slide {
         position: relative;
     }
