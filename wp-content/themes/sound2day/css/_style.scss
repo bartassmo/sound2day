@@ -9,8 +9,22 @@
     @media #{$sDesktop} {
         margin-top: 108px;
     }
+    &__slick {
+        @media #{$sTablet} {
+            display: flex;
+            flex-direction: row;
+        }
+    }
+    &__wrapper {
+        margin-bottom: -7px;
+        @media #{$sTablet} {
+            margin-bottom: 0;
+            width: 50%;
+        }
+    }
     &__slide {
         position: relative;
+        outline: none;
     }
     &__content {
         position: absolute;
@@ -257,6 +271,7 @@
                 }
                 &__text {
                     transform: translateY(-10px);
+                    color: $cWhite;
                 }
                 &__name::after {
                     width: 100%;
@@ -282,12 +297,6 @@
         width: 100%;
         height: 100%;
         padding: 10px;
-        background: linear-gradient(
-            0deg,
-            #141414 0,
-            rgba(32, 32, 32, 0.05) 25%,
-            rgba(32, 32, 32, 0)
-        );
     }
     img {
         width: 85%;
@@ -316,7 +325,7 @@
         }
     }
     &__text {
-        color: $cWhite;
+        color: $cPrimary;
         display: inline-block;
         font-weight: 600;
         font-size: 17px;
@@ -721,13 +730,14 @@
             flex-direction: row;
         }
     }
+    color: $cPrimary;
     &__details {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         margin-top: 25px;
         @media #{$sTablet} {
-            width: 30%;
+            width: auto;
             margin-top: 0;
         }
         @media #{$tablet} {
@@ -738,8 +748,9 @@
         max-width: 700px;
         @media #{$sTablet} {
             max-width: none;
-            width: 70%;
+            width: 65%;
             padding-right: 25px;
+            margin-right: 100px;
         }
         @media #{$tablet} {
             padding-right: 0;
@@ -756,19 +767,51 @@
     }
     &__el {
         position: relative;
+        width: 100%;
         margin-bottom: 20px;
         @media #{$sTablet} {
-            width: calc(50% - 30px);
-            margin-right: 30px;
-        }
-        @media #{$tablet} {
-            width: calc(25% - 20px);
-            margin-bottom: 0;
-            margin-right: 20px;
+            width: calc(33.3% - 30px);
+            margin: 0 15px;
             &:last-of-type {
                 margin-right: 0;
-                width: 25%;
             }
+            &.full-width {
+                width: 100%;
+                padding-right: 30px;
+            }
+        }
+    }
+    &__text {
+        position: absolute;
+        top: -10px;
+        left: 28px;
+        padding: 0px 5px;
+        font-size: 18px;
+        font-weight: 600;
+        background: white;
+        z-index: 2;
+        line-height: 1;
+        @media #{$sTablet} {
+            font-size: 20px;
+            font-weight: 700;
+        }
+    }
+    input {
+        border: 2px solid $cPrimary;
+        font-family: $fComfortaa;
+        width: 100%;
+        border-radius: 5px;
+        padding: 10px 10px;
+        box-sizing: border-box;
+        font-size: 16px;
+        color: $cPrimary;
+        @media #{$mobile} {
+            height: 45px;
+            font-size: 20px;
+        }
+        &:focus {
+            outline: none;
+            color: $cPrimary;
         }
     }
     &__full {
@@ -781,64 +824,41 @@
             margin-right: 0;
         }
     }
-    &__text {
-        font-size: 14px;
-        font-weight: 500;
-        color: $cDark;
-        text-transform: uppercase;
-        position: absolute;
-        top: -3px;
-        left: 0;
-        display: inline-block;
-        z-index: 5;
-        background-color: $cWhite;
-        padding: 0 5px;
-        line-height: 1;
-        @include animate;
+    textarea {
+        border: 2px solid $cPrimary;
+        height: 170px;
+        padding: 10px 10px;
+        width: 100%;
+        font-size: 20px;
+        resize: none;
+        box-sizing: border-box;
+        &:focus {
+            outline: none;
+        }
+    }
+    form.wpcf7-form span.wpcf7-not-valid-tip {
+        margin-top: 10px;
+        font-size: 16px;
+        font-weight: 400;
+        font-family: $fLato;
+    }
+    form.wpcf7-form div.wpcf7-response-output {
+        font-family: $fLato;
+        font-weight: 400;
+        padding: 0;
+        border: 0;
+        margin: 0;
+        margin-top: 10px;
+        font-size: 18px;
+        margin-left: 15px;
     }
     &__wrapper {
         position: relative;
-    }
-    &__input {
-        padding: 15px 15px 0;
-        font-size: 15px;
-        font-style: italic;
-        color: #010101;
-        width: 100%;
-        border: 0;
-        box-sizing: border-box;
-        &:focus {
-            & + .contact__after::after {
-                width: 100%;
-            }
-        }
-    }
-    &__after {
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        height: 2px;
-        background-color: #d4d5d8;
-        &::after {
-            position: absolute;
-            bottom: 0;
-            content: '';
-            display: block;
-            width: 0%;
-            height: 2px;
-            background-color: $cPrimary;
-            transition: all 0.5s ease;
-        }
     }
     &__btn {
         display: flex;
         justify-content: center;
         margin-top: 25px;
-        @media #{$tablet} {
-            margin-top: 0;
-            margin-right: 0;
-        }
     }
     &__submit {
         background-color: transparent;
@@ -854,7 +874,7 @@
             position: absolute;
             display: block;
             background-color: $cPrimary;
-            width: 0%;
+            width: 75%;
             height: 2px;
             @include animate;
         }
@@ -882,13 +902,19 @@
     }
     &__more {
         margin: 0;
-        color: #2d3a4b;
+        color: $cDark;
         align-items: center;
         display: block;
-        font-size: 14px;
+        font-size: 16px;
         width: 100%;
         height: 100%;
         cursor: pointer;
+        @media #{$sTablet} {
+            font-size: 18px;
+        }
+        @media #{$sDesktop} {
+            font-size: 20px;
+        }
         &::after,
         &::before {
             content: '';
@@ -916,11 +942,22 @@
         @media #{$sTablet} {
             max-width: 215px;
         }
+        @media #{$tablet} {
+            max-width: 265px;
+            margin-bottom: 15px;
+        }
     }
     &__title {
         display: inline-block;
         font-size: 19px;
         margin-bottom: 15px;
+        @media #{$tablet} {
+            font-size: 21px;
+            font-weight: 500;
+        }
+        @media #{$desktop} {
+            font-size: 23px;
+        }
     }
     &__link {
         display: inline-flex;
@@ -929,6 +966,13 @@
         text-decoration: none;
         font-size: 18px;
         margin-bottom: 15px;
+        @media #{$tablet} {
+            font-size: 19px;
+            font-weight: 400;
+        }
+        @media #{$desktop} {
+            font-size: 20px;
+        }
     }
     &--tel {
         &::before {

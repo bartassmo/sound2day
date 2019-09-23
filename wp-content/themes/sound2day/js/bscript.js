@@ -19,23 +19,33 @@ $(document).ready(function() {
         $(this).toggleClass('open');
         $('.header__nav').toggleClass('opened');
     });
-    $('#slick').slick({
+    $('#slider1').slick({
         dots: false,
         autoplay: true,
         infinite: true,
         speed: 1000,
         slidesToShow: 1,
         slidesToScroll: 1,
+        pauseOnFocus: false,
+        pauseOnHover: false,
         arrows: false,
         mobileFirst: true,
-        responsive: [
-            {
-                breakpoint: 1278,
-                settings: {
-                    slidesToShow: 2
-                }
-            }
-        ]
+        fade: true,
+        cssEase: 'linear'
+    });
+    $('#slider2').slick({
+        dots: false,
+        autoplay: true,
+        infinite: true,
+        speed: 1000,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        pauseOnFocus: false,
+        pauseOnHover: false,
+        arrows: false,
+        mobileFirst: true,
+        fade: true,
+        cssEase: 'linear'
     });
     $('#sliderProd').slick({
         autoplay: true,
@@ -66,5 +76,4 @@ $(document).ready(function() {
             }
         ]
     });
-    $('.wpcf7-form-control').after('<span class="contact__after"></span>');
 });

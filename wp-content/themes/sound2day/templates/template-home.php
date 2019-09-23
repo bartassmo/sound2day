@@ -10,6 +10,7 @@
 
 $infoGroup = get_post_meta( get_the_id(), 'info-group', true);
 $sliderGroup = get_post_meta( get_the_id(), 'slider-group', true);
+$slider2Group = get_post_meta( get_the_id(), 'slider2-group', true);
 $producentsTitle = get_post_meta( get_the_id(), 'producents-title', true);
 
 ?>
@@ -18,9 +19,24 @@ $producentsTitle = get_post_meta( get_the_id(), 'producents-title', true);
 
 <section class="slider">
     <div class="slider__slick">
-        <div class="slider__wrapper" id="slick" >
+        <div class="slider__wrapper" id="slider1" >
             <?php 
                 foreach($sliderGroup as $elem) { ?>
+                    <div class="slider__slide">
+                        <img src="<?php echo $elem['img']; ?>" class="slider__img" alt="">
+                        <div class="slider__content container wow fadeInLeft">
+                            <div class="slider__box">
+                                <span class="slider__title"><?php echo $elem['title']; ?></span>
+                                <span class="slider__text"><?php echo $elem['text']; ?></span>
+                            </div>
+                        </div>
+                    </div>
+                <?php }    
+            ?>
+        </div>
+        <div class="slider__wrapper" id="slider2" >
+            <?php 
+                foreach($slider2Group as $elem) { ?>
                     <div class="slider__slide">
                         <img src="<?php echo $elem['img']; ?>" class="slider__img" alt="">
                         <div class="slider__content container wow fadeInLeft">
