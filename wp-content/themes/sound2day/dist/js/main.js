@@ -10717,12 +10717,14 @@ $(document).ready(function() {
         autoplay: true,
         infinite: true,
         speed: 1000,
+        autoplaySpeed: 5000,
         slidesToShow: 1,
         slidesToScroll: 1,
         pauseOnFocus: false,
         pauseOnHover: false,
         arrows: false,
         mobileFirst: true,
+        draggable: false,
         fade: true,
         cssEase: 'linear'
     });
@@ -10731,12 +10733,14 @@ $(document).ready(function() {
         autoplay: true,
         infinite: true,
         speed: 1000,
+        autoplaySpeed: 5000,
         slidesToShow: 1,
         slidesToScroll: 1,
         pauseOnFocus: false,
         pauseOnHover: false,
         arrows: false,
         mobileFirst: true,
+        draggable: false,
         fade: true,
         cssEase: 'linear'
     });
@@ -10748,6 +10752,7 @@ $(document).ready(function() {
         centerPadding: 0,
         slidesToScroll: 1,
         mobileFirst: true,
+        pauseOnHover: false,
         responsive: [
             {
                 breakpoint: 766,
@@ -10769,7 +10774,6 @@ $(document).ready(function() {
             }
         ]
     });
-    $('.wpcf7-form-control').after('<span class="contact__after"></span>');
 });
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))

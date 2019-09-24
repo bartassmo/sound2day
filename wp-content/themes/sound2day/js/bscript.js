@@ -24,12 +24,14 @@ $(document).ready(function() {
         autoplay: true,
         infinite: true,
         speed: 1000,
+        autoplaySpeed: 5000,
         slidesToShow: 1,
         slidesToScroll: 1,
         pauseOnFocus: false,
         pauseOnHover: false,
         arrows: false,
         mobileFirst: true,
+        draggable: false,
         fade: true,
         cssEase: 'linear'
     });
@@ -38,12 +40,14 @@ $(document).ready(function() {
         autoplay: true,
         infinite: true,
         speed: 1000,
+        autoplaySpeed: 5000,
         slidesToShow: 1,
         slidesToScroll: 1,
         pauseOnFocus: false,
         pauseOnHover: false,
         arrows: false,
         mobileFirst: true,
+        draggable: false,
         fade: true,
         cssEase: 'linear'
     });
@@ -55,6 +59,7 @@ $(document).ready(function() {
         centerPadding: 0,
         slidesToScroll: 1,
         mobileFirst: true,
+        pauseOnHover: false,
         responsive: [
             {
                 breakpoint: 766,

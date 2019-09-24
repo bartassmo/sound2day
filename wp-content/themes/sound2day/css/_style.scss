@@ -20,6 +20,13 @@
         @media #{$sTablet} {
             margin-bottom: 0;
             width: 50%;
+            border-top: 5px solid $cWhite;
+            &--1 {
+                border-right: 2px solid $cWhite;
+            }
+            &--2 {
+                border-left: 2px solid $cWhite;
+            }
         }
     }
     &__slide {
@@ -744,6 +751,16 @@
             padding-left: 50px;
         }
     }
+    &__address {
+        color: $cDark;
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 1.5;
+        @media #{$sTablet} {
+            line-height: 1.6;
+            font-size: 18px;
+        }
+    }
     &__form {
         max-width: 700px;
         @media #{$sTablet} {
@@ -955,9 +972,6 @@
             font-size: 21px;
             font-weight: 500;
         }
-        @media #{$desktop} {
-            font-size: 23px;
-        }
     }
     &__link {
         display: inline-flex;
@@ -969,9 +983,6 @@
         @media #{$tablet} {
             font-size: 19px;
             font-weight: 400;
-        }
-        @media #{$desktop} {
-            font-size: 20px;
         }
     }
     &--tel {

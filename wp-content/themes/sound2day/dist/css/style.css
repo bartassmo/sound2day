@@ -605,7 +605,12 @@ h6 {
     @media only screen and (min-width: 1023px) {
       .slider__wrapper {
         margin-bottom: 0;
-        width: 50%; } }
+        width: 50%;
+        border-top: 5px solid #ffffff; }
+        .slider__wrapper--1 {
+          border-right: 2px solid #ffffff; }
+        .slider__wrapper--2 {
+          border-left: 2px solid #ffffff; } }
   .slider__slide {
     position: relative;
     outline: none; }
@@ -1329,6 +1334,15 @@ h6 {
     @media only screen and (min-width: 1279px) {
       .contact__details {
         padding-left: 50px; } }
+  .contact__address {
+    color: #141414;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 1.5; }
+    @media only screen and (min-width: 1023px) {
+      .contact__address {
+        line-height: 1.6;
+        font-size: 18px; } }
   .contact__form {
     max-width: 700px; }
     @media only screen and (min-width: 1023px) {
@@ -1512,9 +1526,6 @@ h6 {
       .contact__title {
         font-size: 21px;
         font-weight: 500; } }
-    @media only screen and (min-width: 1599px) {
-      .contact__title {
-        font-size: 23px; } }
   .contact__link {
     display: -ms-inline-flexbox;
     display: inline-flex;
@@ -1528,9 +1539,6 @@ h6 {
       .contact__link {
         font-size: 19px;
         font-weight: 400; } }
-    @media only screen and (min-width: 1599px) {
-      .contact__link {
-        font-size: 20px; } }
   .contact--tel::before {
     content: url(../img/phone.png);
     display: -ms-inline-flexbox;

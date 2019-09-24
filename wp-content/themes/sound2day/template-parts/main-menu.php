@@ -16,7 +16,7 @@
                     ) );
             ?>
             <div class="social">
-                <a href="#" class="social__link" title="Odwiedź nasz fanpage!"><?php echo getSvgContent(locate_template('dist/img/svg/fb-icon.svg')); ?></a>
+                <a href="https://www.facebook.com/Sound2Day-2179886255611366/" target="_blank" class="social__link" title="Odwiedź nasz fanpage!"><?php echo getSvgContent(locate_template('dist/img/svg/fb-icon.svg')); ?></a>
             </div>
         </nav>
     </div>

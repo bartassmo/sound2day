@@ -19,7 +19,7 @@ $producentsTitle = get_post_meta( get_the_id(), 'producents-title', true);
 
 <section class="slider">
     <div class="slider__slick">
-        <div class="slider__wrapper" id="slider1" >
+        <div class="slider__wrapper slider__wrapper--1" id="slider1" >
             <?php 
                 foreach($sliderGroup as $elem) { ?>
                     <div class="slider__slide">
@@ -34,7 +34,7 @@ $producentsTitle = get_post_meta( get_the_id(), 'producents-title', true);
                 <?php }    
             ?>
         </div>
-        <div class="slider__wrapper" id="slider2" >
+        <div class="slider__wrapper slider__wrapper--2" id="slider2" >
             <?php 
                 foreach($slider2Group as $elem) { ?>
                     <div class="slider__slide">
