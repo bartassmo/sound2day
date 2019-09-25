@@ -11,6 +11,18 @@
 
     add_filter('wp_nav_menu', 'add_menuclass');
 
+    function slider_fancy( $file_list_meta_key, $img_size) {
+
+        $files = get_post_meta( get_the_ID(), $file_list_meta_key, 1 );
+    
+        foreach ( (array) $files as $attachment_id => $attachment_url ) {
+            echo '<div class="slide">';
+            echo '<a class="fancy__slide" href="' . wp_get_attachment_url($attachment_id) . '">';
+            echo wp_get_attachment_image( $attachment_id, $img_size );
+            echo '</a></div>';
+        }
+    }
+
     function cmb2_output_file_list( $file_list_meta_key, $img_size) {
 
         $files = get_post_meta( get_the_ID(), $file_list_meta_key, 1 );
@@ -47,7 +59,7 @@ function create_post_types() {
         'hierarchical' => true,
         'posts_per_archive_page' => 50
     ));
-
+    
     register_post_type('rental', array(
         'labels' => array(
             'name' => __('Wypożyczalnia'),
@@ -65,6 +77,23 @@ function create_post_types() {
         'posts_per_archive_page' => 50
     ));
 
+    register_post_type('project', array(
+        'labels' => array(
+            'name' => __('Realizacje'),
+            'singular_name' => __('Realizacja')
+        ),
+        'public' => true,
+        'rewrite' => array('slug' => 'realizacje'),
+        'supports' => array(
+            'title',
+            'page-attributes',
+            'editor',
+            'thumbnail',
+        ),
+        'hierarchical' => true,
+        'posts_per_archive_page' => 50
+    ));
+    
 }
 
 add_action('init', 'create_post_types');

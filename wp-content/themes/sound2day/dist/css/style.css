@@ -852,7 +852,7 @@ h6 {
   width: 100%;
   position: relative;
   border-radius: 5px; }
-  @media only screen and (min-width: 767px) {
+  @media only screen and (min-width: 539px) {
     .rental-item {
       width: calc(50% - 30px);
       -ms-flex-pack: center;
@@ -1159,12 +1159,12 @@ h6 {
         align-items: center;
     -ms-flex-direction: column;
         flex-direction: column; }
-    @media only screen and (min-width: 767px) {
+    @media only screen and (min-width: 539px) {
       .services__container {
         -ms-flex-direction: row;
             flex-direction: row;
-        -ms-flex-pack: center;
-            justify-content: center; } }
+        -ms-flex-pack: start;
+            justify-content: flex-start; } }
 
 .service {
   display: -ms-flexbox;
@@ -1224,7 +1224,7 @@ h6 {
   overflow: hidden;
   border-radius: 5px;
   margin-bottom: 15px; }
-  @media only screen and (min-width: 767px) {
+  @media only screen and (min-width: 539px) {
     .service-item {
       margin: 15px;
       width: calc(50% - 30px);
