@@ -7,7 +7,7 @@
     ));
 
     $page->add_field( array(
-        'name'       => esc_html__( 'Baner na górze strony', 'cmb2' ),
+        'name'       => esc_html__( 'Duże zdjęcie na dole strony', 'cmb2' ),
         'id'         => 'project-baner',
         'type'       => 'file',
         'sanitization_cb' => false,

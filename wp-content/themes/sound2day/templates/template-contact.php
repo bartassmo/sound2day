@@ -20,18 +20,18 @@
 
 <section class="hero nPadding" style="background-image: url(<?php echo $heroImg; ?>);">
     <div class="container sPadding">
-        <div class="page-header">
+        <div class="page-header wow fadeInLeft">
             <span class="page-header__title"><?php echo $title; ?></span>
         </div>
     </div>
 </section>
 <section class="contact bPadding">
     <div class="container contact__container">
-        <div class="contact__form">
+        <div class="contact__form wow fadeIn" data-wow-delay="0.25s">
             <?php echo do_shortcode( '[contact-form-7 id="5" title="Podstrona Kontakt"]' ); ?>
         </div>
-        <div class="contact__details">
-            <img src="<?php echo get_template_directory_uri(); ?>/dist/img/logo-black.png" alt="Sound2day" class="contact__logo">
+        <div class="contact__details wow fadeInRight" data-wow-delay="0.25s">
+            <img src="<?php echo get_template_directory_uri(); ?>/dist/img/logo-black.png" alt="Sound2day" class="contact__logo wow fadeIn" data-wow-delay="1s">
             <span class="contact__title"><?php echo $contactTitle; ?></span>
             <a href="tel:<?php echo $contactTel; ?>" class="contact__link contact--tel"><?php echo $contactTel; ?></a>
             <a href="tel:<?php echo $contactMail; ?>" class="contact__link contact--mail"><?php echo $contactMail; ?></a>

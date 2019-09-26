@@ -17,7 +17,7 @@
 
 <section class="hero nPadding" style="background-image: url(<?php echo $heroImg; ?>);">
     <div class="container sPadding">
-        <div class="page-header">
+        <div class="page-header wow fadeInLeft">
             <span class="page-header__title"><?php echo $title; ?></span>
         </div>
     </div>

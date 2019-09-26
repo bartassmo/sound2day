@@ -33,7 +33,8 @@
             echo '</div>';
         }
     }
-
+    add_image_size('sliderBig', 771, 509, array( 'center', 'top'));
+    add_image_size('sliderSmall', 128, 84, array( 'center', 'top'));
     add_image_size( 'sliderImg', 300, 100 );
 
 /*---------------------------------------------------*/

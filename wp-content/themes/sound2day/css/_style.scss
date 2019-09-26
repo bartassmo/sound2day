@@ -219,6 +219,9 @@
         p {
             margin-bottom: 1em;
         }
+        @media #{$sTablet} {
+            visibility: hidden;
+        }
     }
     &__img {
         margin: 0 -15px -35px;
@@ -229,6 +232,9 @@
         @media #{$sTablet} {
             margin: 0;
             margin-top: 15px;
+            img {
+                visibility: hidden;
+            }
         }
         @media #{$tablet} {
             margin: 0;
@@ -271,6 +277,7 @@
         border-radius: 10px;
         width: calc(33.33% - 30px);
         margin: 15px;
+        visibility: hidden;
         &:hover {
             .rental-item {
                 &__layer {
@@ -478,6 +485,7 @@
         @media #{$sTablet} {
             padding-left: 20px;
             padding-right: 20px;
+            visibility: hidden;
         }
         @media #{$tablet} {
             padding-left: 50px;
@@ -594,6 +602,10 @@
         flex-direction: row;
         justify-content: space-between;
         font-size: 16px;
+        align-items: flex-start;
+        &.service-sidebar {
+            align-items: stretch;
+        }
     }
     @media #{$tablet} {
         font-size: 17px;
@@ -611,6 +623,7 @@
         @media #{$sTablet} {
             padding-left: 3%;
             width: 60%;
+            visibility: hidden;
         }
         @media #{$tablet} {
             padding-left: 5%;
@@ -622,6 +635,24 @@
         }
         @media #{$desktop} {
             padding-left: 9%;
+        }
+    }
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        @media #{$sTablet} {
+            flex-direction: row;
+        }
+    }
+    &__content {
+        width: auto;
+        margin-bottom: 15px;
+        @media #{$sTablet} {
+            visibility: hidden;
+        }
+        @media #{$tablet} {
+            margin-bottom: 0;
+            padding-right: 50px;
         }
     }
 }
@@ -638,6 +669,7 @@
     }
     @media #{$sTablet} {
         border-radius: 10px;
+        visibility: hidden;
         margin: 15px;
         &:hover {
             .service-item {
@@ -746,6 +778,7 @@
         @media #{$sTablet} {
             width: auto;
             margin-top: 0;
+            visibility: hidden;
         }
         @media #{$tablet} {
             padding-left: 50px;
@@ -768,6 +801,7 @@
             width: 65%;
             padding-right: 25px;
             margin-right: 100px;
+            visibility: hidden;
         }
         @media #{$tablet} {
             padding-right: 0;
@@ -958,6 +992,7 @@
         margin-bottom: 25px;
         @media #{$sTablet} {
             max-width: 215px;
+            visibility: hidden;
         }
         @media #{$tablet} {
             max-width: 265px;
@@ -1034,4 +1069,132 @@
 
 .wpcf7-form-control {
     resize: none;
+}
+
+.project {
+    &__slider {
+        display: inline-block;
+        position: relative;
+        @media #{$sTablet} {
+            margin-top: 25px;
+            width: 50%;
+            padding-left: 75px;
+            margin-top: 0;
+            visibility: hidden;
+        }
+        @media #{$tablet} {
+        }
+        &__big {
+            padding-bottom: 15px;
+            text-align: center;
+            @media #{$tablet} {
+                text-align: left;
+            }
+            .slick-slide {
+                @media #{$tablet} {
+                    margin-right: 30px;
+                }
+            }
+        }
+        &__small {
+            display: none;
+            @media #{$sTablet} {
+                display: block;
+                width: calc(50% + 20px);
+                position: absolute;
+                bottom: 0;
+                right: 10px;
+                visibility: hidden;
+            }
+            @media #{$tablet} {
+                .slick-slide {
+                    padding: 0 5px;
+                }
+                bottom: 15px;
+                right: 30px;
+            }
+            @media #{$desktop} {
+            }
+        }
+        &--mobile {
+            margin-bottom: 15px;
+            @media #{$sTablet} {
+                display: none;
+            }
+        }
+        &__nav {
+            display: none;
+            width: 10%;
+            font-size: 0;
+            justify-content: space-between;
+            align-items: center;
+            @media #{$tablet} {
+                display: inline-flex;
+            }
+            &--arrow {
+                font-size: 14px;
+                font-weight: 300;
+                font-style: italic;
+                position: relative;
+                display: inline-flex;
+                align-items: center;
+                text-transform: lowercase;
+                cursor: pointer;
+                &::after,
+                &::before {
+                    color: $cPrimary;
+                    font-family: $fComfortaa;
+                    font-size: 18px;
+                    display: inline-block;
+                }
+            }
+            &--left {
+                &::before {
+                    content: '<<';
+                }
+            }
+            &--right {
+                &::after {
+                    content: '>>';
+                }
+            }
+        }
+    }
+    &__gallery {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 25px;
+        @media #{$sTablet} {
+            flex-direction: column;
+            width: 45%;
+            flex-shrink: 0;
+            justify-content: flex-start;
+            margin-top: 0;
+            padding-left: 45px;
+            padding-top: 13px;
+        }
+        @media #{$sDesktop} {
+            padding-left: 60px;
+        }
+        @media #{$desktop} {
+            padding-left: 75px;
+        }
+        .slide {
+            display: inline-flex;
+            padding: 0 5px;
+            @media #{$sTablet} {
+                margin-bottom: 10px;
+            }
+            @media #{$tablet} {
+                margin-bottom: 20px;
+                padding: 0;
+            }
+            @media #{$sDesktop} {
+                margin-bottom: 25px;
+            }
+            @media #{$desktop} {
+                margin-bottom: 30px;
+            }
+        }
+    }
 }

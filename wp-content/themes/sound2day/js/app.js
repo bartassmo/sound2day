@@ -3,5 +3,6 @@ require('../css/app.scss');
 
 //Scripts ===========================================
 require('./bscript.js');
-require('slick-carousel');
 require('jquery');
+require('@fancyapps/fancybox');
+require('slick-carousel');

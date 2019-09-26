@@ -1,4 +1,4 @@
-<a class="service-item" href="<?php echo get_the_permalink(); ?>">
+<a class="service-item wow fadeIn" data-wow-delay="0.1s" href="<?php echo get_the_permalink(); ?>">
     <div class="service-item__inner">
         <div class="service-item__gradient">
             <div class="service-item__layer">

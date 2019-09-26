@@ -56,7 +56,7 @@ $producentsTitle = get_post_meta( get_the_id(), 'producents-title', true);
         <div class="info container nPadding">
             <?php 
             foreach($infoGroup as $elem) { ?>
-                <div class="info__block">
+                <div class="info__block wow fadeInDown">
                     <div class="info__img" style="background-image: url(<?php echo $elem['img'] ?>);"></div>
                     <div class="info__content">
                         <span class="info__title"><?php echo $elem['title'] ?></span>
@@ -69,7 +69,7 @@ $producentsTitle = get_post_meta( get_the_id(), 'producents-title', true);
 </section>
 <section class="producents sPadding">
     <div class="title__box">
-        <h1 class="title title--center"><?php echo $producentsTitle; ?></h1>
+        <h1 class="title title--center wow fadeInRight"><?php echo $producentsTitle; ?></h1>
     </div>
     <div class="producents__wrapper" id="sliderProd">
         <?php cmb2_output_file_list('slider-producents', 'sliderImg'); ?>

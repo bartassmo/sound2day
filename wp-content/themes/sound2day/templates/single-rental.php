@@ -10,15 +10,15 @@
 
 <section class="hero nPadding" style="background-image: url(<?php echo $heroImg; ?>);">
     <div class="container sPadding">
-        <div class="page-header">
+        <div class="page-header wow fadeInLeft">
             <span class="page-header__title"><?php echo $title; ?></span>
         </div>
     </div>
 </section>
-<section class="service">
+<section class="service service-sidebar">
     <div class="service__container rental__container bPadding">
         <?php foreach($rentalGroup as $elem) { ?>
-            <div class="rental__block">
+            <div class="rental__block wow fadeInUp" data-wow-delay="0.15s">
                 <div class="rental__content">
                     <div class="rental__img"><img src="<?php echo $elem['img'] ?>" alt=""></div>
                     <span class="rental__title"><?php echo $elem['name'] ?></span>
@@ -29,7 +29,7 @@
         <?php } ?>
     </div>
     <aside class="sidebar">
-        <div class="sidebar__content bPadding">
+        <div class="sidebar__content bPadding wow fadeInRight">
             <span class="sidebar__title">Zobacz również</span>
             <ul class="sidebar__list">
                 <?php

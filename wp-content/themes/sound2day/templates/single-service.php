@@ -9,13 +9,13 @@
 
 <section class="hero nPadding" style="background-image: url(<?php echo $heroImg; ?>);">
     <div class="container sPadding">
-        <div class="page-header">
+        <div class="page-header wow fadeInLeft">
             <span class="page-header__title"><?php echo $title; ?></span>
         </div>
     </div>
 </section>
-<section class="service">
-    <div class="service__container bPadding">
+<section class="service service-sidebar">
+    <div class="service__container bPadding wow fadeInLeft">
         <?php while ( have_posts() ) :
             the_post();
             the_content();
@@ -23,7 +23,7 @@
         ?>
     </div>
     <aside class="sidebar">
-        <div class="sidebar__content bPadding">
+        <div class="sidebar__content bPadding wow fadeInRight">
             <span class="sidebar__title">Zobacz również</span>
             <ul class="sidebar__list">
                 <?php

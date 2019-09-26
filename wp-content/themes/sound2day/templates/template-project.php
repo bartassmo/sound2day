@@ -1,7 +1,7 @@
 <?php 
 
 /*
-    Template name: Usługi
+    Template name: Realizacje
 */
 
 ?>
@@ -22,17 +22,17 @@
         </div>
     </div>
 </section>
-<section class="services bPadding">
+<section class="rentals bPadding">
     <div class="container">
-        <div class="services__container">
+        <div class="rentals__container">
     <?php
-        $seeAlso = new WP_Query( array(
-            'post_type' => 'service',
+        $project = new WP_Query( array(
+            'post_type' => 'project',
             'posts_per_page' => -1,
             'orderby' => 'menu_order',
             ) );
             ?>
-    <?php while( $seeAlso->have_posts() ) : $seeAlso->the_post();
+    <?php while( $project->have_posts() ) : $project->the_post();
         include(locate_template('template-parts/service-item.php') );
     endwhile; wp_reset_query(); ?>
     </div>

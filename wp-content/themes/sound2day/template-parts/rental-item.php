@@ -1,4 +1,4 @@
-<a class="rental-item" href="<?php echo get_the_permalink(); ?>">
+<a class="rental-item wow fadeInUp" data-wow-delay="0.2s" href="<?php echo get_the_permalink(); ?>">
     <div class="rental-item__inner">
         <div class="rental-item__gradient">
             <div class="rental-item__layer">

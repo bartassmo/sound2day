@@ -18,6 +18,83 @@ body {
     color: $cLight;
 }
 
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: $cBackground;
+    opacity: 0;
+    z-index: 9999999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease;
+    &.active {
+        opacity: 1;
+    }
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__img {
+        width: 200px;
+    }
+    .spinner {
+        margin: 25px auto 0;
+        width: 70px;
+        text-align: center;
+    }
+
+    .spinner > div {
+        width: 18px;
+        height: 18px;
+        background-color: $cPrimary;
+        border-radius: 100%;
+        display: inline-block;
+        -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+        animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+    }
+
+    .spinner .bounce1 {
+        -webkit-animation-delay: -0.32s;
+        animation-delay: -0.32s;
+    }
+
+    .spinner .bounce2 {
+        -webkit-animation-delay: -0.16s;
+        animation-delay: -0.16s;
+    }
+
+    @-webkit-keyframes sk-bouncedelay {
+        0%,
+        80%,
+        100% {
+            -webkit-transform: scale(0);
+        }
+        40% {
+            -webkit-transform: scale(1);
+        }
+    }
+
+    @keyframes sk-bouncedelay {
+        0%,
+        80%,
+        100% {
+            -webkit-transform: scale(0);
+            transform: scale(0);
+        }
+        40% {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+    }
+}
+
 .container {
     padding: 0 15px;
     @media #{$mobile} {
@@ -131,6 +208,9 @@ h6 {
 
 .page-header {
     margin-top: 65px;
+    @media #{$sTablet} {
+        visibility: hidden;
+    }
     &__title {
         font-size: 26px;
         color: $cWhite;
@@ -159,6 +239,7 @@ h6 {
     }
     @media #{$sTablet} {
         font-size: 22px;
+        visibility: hidden;
     }
     @media #{$tablet} {
         font-size: 24px;
@@ -203,5 +284,18 @@ h6 {
     &--left {
         align-self: flex-start;
         align-items: flex-start;
+    }
+}
+
+.btn {
+    display: inline-block;
+    color: $cPrimary;
+    text-decoration: none;
+    font-family: $fComfortaa;
+    font-size: 15px;
+    text-transform: lowercase;
+    font-weight: 500;
+    @media #{$sTablet} {
+        visibility: hidden;
     }
 }
