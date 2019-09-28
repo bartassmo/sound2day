@@ -25,7 +25,7 @@ $producentsTitle = get_post_meta( get_the_id(), 'producents-title', true);
                     <div class="slider__slide">
                         <img src="<?php echo $elem['img']; ?>" class="slider__img" alt="">
                         <div class="slider__content container wow fadeInLeft">
-                            <div class="slider__box">
+                            <div class="slider__box" style="color: <?php echo $elem['color']; ?>">
                                 <span class="slider__title"><?php echo $elem['title']; ?></span>
                                 <span class="slider__text"><?php echo $elem['text']; ?></span>
                             </div>
@@ -40,7 +40,7 @@ $producentsTitle = get_post_meta( get_the_id(), 'producents-title', true);
                     <div class="slider__slide">
                         <img src="<?php echo $elem['img']; ?>" class="slider__img" alt="">
                         <div class="slider__content container wow fadeInLeft">
-                            <div class="slider__box">
+                            <div class="slider__box" style="color: <?php echo $elem['color']; ?>">
                                 <span class="slider__title"><?php echo $elem['title']; ?></span>
                                 <span class="slider__text"><?php echo $elem['text']; ?></span>
                             </div>

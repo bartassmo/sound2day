@@ -433,7 +433,8 @@ h6 {
     text-transform: uppercase;
     font-size: 19px;
     font-family: "Comfortaa", cursive;
-    margin-bottom: 5px; }
+    margin-bottom: 5px;
+    position: relative; }
     @media only screen and (min-width: 767px) {
       .menu-item {
         letter-spacing: 0.4px;
@@ -478,6 +479,22 @@ h6 {
         font-weight: 400; }
         .menu__link:hover {
           color: #ffffff; } }
+
+.sub-menu {
+  display: none; }
+  @media only screen and (min-width: 1023px) {
+    .sub-menu {
+      display: block;
+      margin: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin-top: 35px;
+      padding: 5px 0;
+      list-style-type: none;
+      min-width: 285px;
+      border: 1px solid #141414;
+      background-color: rgba(20, 20, 20, 0.75); } }
 
 .social {
   display: -ms-inline-flexbox;
@@ -709,7 +726,8 @@ h6 {
     @media only screen and (min-width: 1023px) {
       .slider__content {
         -ms-flex-pack: start;
-            justify-content: flex-start; } }
+            justify-content: flex-start;
+        visibility: hidden; } }
   .slider__box {
     display: -ms-flexbox;
     display: flex;
@@ -929,6 +947,9 @@ h6 {
         flex-wrap: wrap; }
     @media only screen and (min-width: 1023px) {
       .rentals__container {
+        padding: 0 25px; } }
+    @media only screen and (min-width: 1599px) {
+      .rentals__container {
         padding: 0 85px; } }
 
 .rental-item {
@@ -996,6 +1017,10 @@ h6 {
     @media only screen and (min-width: 1023px) {
       .rental-item__layer {
         border: 2px solid #548d9b;
+        padding: 10px;
+        padding-bottom: 5px; } }
+    @media only screen and (min-width: 1599px) {
+      .rental-item__layer {
         padding: 15px; } }
   .rental-item__name {
     width: 100%;
@@ -1019,6 +1044,9 @@ h6 {
     @media only screen and (min-width: 1023px) {
       .rental-item__text {
         line-height: 1.4;
+        font-size: 17px; } }
+    @media only screen and (min-width: 1599px) {
+      .rental-item__text {
         font-size: 20px; } }
 
 .rental__block {
@@ -1353,11 +1381,14 @@ h6 {
         transform: translateY(-10px); }
       .service-item:hover .service-item__name::after {
         width: 100%; } }
-  @media only screen and (min-width: 1279px) {
+  @media only screen and (min-width: 1365px) {
     .service-item {
-      width: auto;
+      width: calc(33.3% - 30px);
       -ms-flex-pack: start;
           justify-content: flex-start; } }
+  @media only screen and (min-width: 1599px) {
+    .service-item {
+      width: auto; } }
   .service-item__inner {
     display: block;
     position: relative;

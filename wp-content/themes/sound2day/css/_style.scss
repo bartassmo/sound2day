@@ -45,6 +45,7 @@
         justify-content: center;
         @media #{$sTablet} {
             justify-content: flex-start;
+            visibility: hidden;
         }
     }
     &__box {
@@ -258,6 +259,9 @@
         flex-direction: row;
         flex-wrap: wrap;
         @media #{$sTablet} {
+            padding: 0 25px;
+        }
+        @media #{$desktop} {
             padding: 0 85px;
         }
     }
@@ -328,6 +332,10 @@
         padding: 10px;
         @media #{$sTablet} {
             border: 2px solid $cPrimary;
+            padding: 10px;
+            padding-bottom: 5px;
+        }
+        @media #{$desktop} {
             padding: 15px;
         }
     }
@@ -353,6 +361,9 @@
         }
         @media #{$sTablet} {
             line-height: 1.4;
+            font-size: 17px;
+        }
+        @media #{$desktop} {
             font-size: 20px;
         }
     }
@@ -685,9 +696,12 @@
             }
         }
     }
-    @media #{$tablet} {
-        width: auto;
+    @media #{$sDesktop} {
+        width: calc(33.3% - 30px);
         justify-content: flex-start;
+    }
+    @media #{$desktop} {
+        width: auto;
     }
     &__inner {
         display: block;

@@ -46,6 +46,12 @@ $page->add_field( array(
         'sanitization_cb' => false,
         ) );
     $page->add_group_field( $blog_group_id, array(
+        'name' => 'Kolor tekstu',
+        'id'   => 'color',
+        'type' => 'colorpicker',
+        'default'   => '#ffffff',
+    ) );
+    $page->add_group_field( $blog_group_id, array(
         'name' => 'Zdjęcie',
         'id'   => 'img',
         'type' => 'file',
@@ -81,6 +87,12 @@ $page->add_field( array(
         'id'   => 'text',
         'type' => 'textarea',
         'sanitization_cb' => false,
+        ) );
+        $page->add_group_field( $blog_group_id, array(
+            'name' => 'Kolor tekstu',
+            'id'   => 'color',
+            'type' => 'colorpicker',
+            'default'   => '#ffffff',
         ) );
     $page->add_group_field( $blog_group_id, array(
         'name' => 'Zdjęcie',
