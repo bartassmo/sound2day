@@ -489,12 +489,32 @@ h6 {
       position: absolute;
       top: 0;
       left: 0;
-      margin-top: 35px;
-      padding: 5px 0;
+      margin-top: 20px;
+      padding: 15px 7px;
       list-style-type: none;
       min-width: 285px;
       border: 1px solid #141414;
-      background-color: rgba(20, 20, 20, 0.75); } }
+      background-color: rgba(20, 20, 20, 0.85);
+      visibility: hidden;
+      opacity: 0;
+      transition: all 0.3s ease-in-out; }
+      .sub-menu .menu-item {
+        margin-bottom: 3px; }
+      .sub-menu .menu__link {
+        display: inline;
+        background-image: linear-gradient(to bottom, #548d9b 0%, #548d9b 100%);
+        background-repeat: no-repeat;
+        background-size: 0 1px;
+        background-position: 0 100%;
+        transition: all 0.3s ease-in-out; }
+        .sub-menu .menu__link:hover {
+          background-size: 100% 1px; }
+        .sub-menu .menu__link:after {
+          display: none; } }
+
+.menu-item:hover .sub-menu {
+  opacity: 1;
+  visibility: visible; }
 
 .social {
   display: -ms-inline-flexbox;
