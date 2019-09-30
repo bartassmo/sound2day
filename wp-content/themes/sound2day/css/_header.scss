@@ -214,6 +214,10 @@
             &:hover {
                 color: $cWhite;
             }
+            &a:focus,
+            &a:visited {
+                color: $cWhite;
+            }
         }
     }
 }
