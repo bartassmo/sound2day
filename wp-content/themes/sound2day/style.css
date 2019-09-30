@@ -114,6 +114,10 @@ pre {
 a {
     background-color: transparent;
 }
+a:focus,
+a:visited {
+    color: initial;
+}
 
 /**
  * 1. Remove the bottom border in Chrome 57-
