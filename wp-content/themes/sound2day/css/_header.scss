@@ -214,8 +214,12 @@
             &:hover {
                 color: $cWhite;
             }
-            &a:focus,
-            &a:visited {
+        }
+    }
+    @media #{$sTablet} {
+        a.menu__link {
+            &:focus,
+            &:visited {
                 color: $cWhite;
             }
         }
