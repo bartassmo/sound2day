@@ -898,3 +898,6 @@ object {
 .gallery-caption {
     display: block;
 }
+.grecaptcha-badge {
+    opacity: 0;
+}
