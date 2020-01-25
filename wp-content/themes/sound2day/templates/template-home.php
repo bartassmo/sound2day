@@ -24,12 +24,14 @@ $producentsTitle = get_post_meta( get_the_id(), 'producents-title', true);
                 foreach($sliderGroup as $elem) { ?>
                     <div class="slider__slide">
                         <img src="<?php echo $elem['img']; ?>" class="slider__img" alt="">
+                        <?php if(!empty($elem['title']) && !empty($elem['text'])) { ?>
                         <div class="slider__content container wow fadeInLeft">
                             <div class="slider__box" style="color: <?php echo $elem['color']; ?>">
                                 <span class="slider__title"><?php echo $elem['title']; ?></span>
                                 <span class="slider__text"><?php echo $elem['text']; ?></span>
                             </div>
                         </div>
+                        <?php } ?>
                     </div>
                 <?php }    
             ?>

@@ -65,6 +65,9 @@ $(document).ready(function() {
         arrows: false,
         mobileFirst: true,
         draggable: false,
+        swipe: false,
+        swipeToSlide: false,
+        touchMove: false,
         fade: true,
         cssEase: 'linear'
     });
@@ -81,6 +84,9 @@ $(document).ready(function() {
         arrows: false,
         mobileFirst: true,
         draggable: false,
+        swipe: false,
+        swipeToSlide: false,
+        touchMove: false,
         fade: true,
         cssEase: 'linear'
     });
